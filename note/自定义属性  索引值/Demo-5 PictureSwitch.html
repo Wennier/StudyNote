@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        ul{
+            margin: 0;
+            padding:0;
+        }
+        li{
+            list-style: none;
+        }
+        body{
+            width:100%;
+            height:100%;
+            background:url("images/bg.jpg") no-repeat;
+            background-size: cover;
+            position: fixed;
+        }
+        p{
+            font-size: 25px;
+            font-weight:bolder;
+            position: absolute;
+            top:30px;
+            left:330px;
+        }
+        #pic{
+            width:690px;
+            height:460px;
+            position: fixed;
+            top:0;
+            bottom:0;
+            left:0;
+            right:0;
+            margin:auto;
+        }
+        
+        #pic .prev,#pic .next{
+            width:50px;
+            height:50px;
+            position: absolute;
+            top:205px;
+        }
+        #pic #prev{
+            left:10px;
+            background: url("images/prev.png") no-repeat;
+        }
+        #pic #next{
+            right:10px;
+            background: url("images/next.png") no-repeat;
+        }
+        #pic ul{}
+        #pic ul li{
+            position: absolute;
+            top:0;
+            left:0;
+        }
+        #list{
+            position: absolute;
+            bottom:50px;
+            left: 600px;
+
+        }
+        #list li{
+            position: relative;
+            float: left;
+        }
+        #list .spic{
+            border:2px solid #fff;
+            padding:2px;
+            width:98px;
+            height:66px;
+            position: absolute;
+            top:-66px;
+            left:-48px;
+        }
+    </style>
+</head>
+<script>
+    window.onload = function() {
+        var oUl = document.getElementById('list');
+        var aLi = oUl.getElementsByTagName('li');
+        var aTip = document.getElementsByClassName('tip');
+
+        var oDiv = document.getElementById('pic');
+        var oUl1 = oDiv.getElementsByTagName('ul')[0];
+        var aLi1 = oUl1.getElementsByTagName('li');
+
+        var oPrev = document.getElementById('prev');
+        var oNext = document.getElementById('next');
+
+        var arrPic = [];
+        var arrSpic = [];
+        //获取里标签里的大图片
+        for(var i = 0;i<aLi1.length;i++){
+            var aPic = aLi1[i].getElementsByTagName('img')[0];
+            for(var j = 0;j<aLi1.length;j++){
+                arrPic[j] = aPic;
+            }
+        }
+
+        //获取li标签里的缩略图片
+        for (var i = 0; i < aLi.length; i++) {
+            var aSpic = aLi[i].getElementsByTagName('img')[1];
+            for (var j = 0; j < aLi.length; j++) {
+                arrSpic[j] = aSpic;
+            }
+        }
+
+        //列表功能实现
+        for (var i = 0; i < aLi.length; i++) {
+            aLi[i].index = i;
+            arrSpic[i].num = i;
+            //鼠标点击展示大图
+            aLi[i].onclick = function () {
+                var num = this.index + 1;
+                arrPic[this.index].src = 'images/' + num + '.jpg';
+            };
+
+            //鼠标抚摸展示缩略图
+            aLi[i].onmouseover = function () {
+                for (var i = 0; i < aTip.length; i++) {
+                    for (var j = 0; j < aTip.length; j++) {
+                        aTip[j].src = 'images/tip.png';
+                        aTip[this.index].src = 'images/tip_push.png';
+                        arrSpic[this.index].className = 'spic';
+                        //arrSpic[this.index].style.top =
+                        var num = this.index + 1;
+                        arrSpic[this.index].src = 'images/' + num + '.jpg';
+                    }
+
+                }
+                ;
+            }
+        };
+
+        //prev实现
+        oPrev.oncli = function(){
+
+        }
+    };
+</script>
+<body>
+<p>带缩略图的图片轮换</p>
+    <div id="pic">
+        <ul>
+            <li><img src="images/1.jpg"/></li>
+            <li><img src="images/2.jpg"/></li>
+            <li><img src="images/3.jpg"/></li>
+            <li><img src="images/4.jpg"/></li>
+            <li><img src="images/5.jpg"/></li>
+        </ul>
+        <span id="prev"></span>
+        <span id="next"></span>
+    </div>
+<ul id="list">
+    <li>
+        <img class="tip" src="images/tip.png" />
+        <img src=""/>
+    </li>
+    <li>
+        <img class="tip" src="images/tip.png" />
+        <img  src=""/>
+    </li>
+    <li>
+        <img class="tip" src="images/tip.png" />
+        <img  src=""/>
+    </li>
+    <li>
+        <img class="tip" src="images/tip.png" />
+        <img  src=""/>
+    </li>
+    <li>
+        <img class="tip" src="images/tip.png" />
+        <img src=""/>
+    </li>
+</ul>
+</body>
+</html>
