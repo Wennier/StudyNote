@@ -34,9 +34,10 @@
             left:0;
             right:0;
             margin:auto;
+            border:1px solid red;
         }
         
-        #pic .prev,#pic .next{
+        #pic #prev,#pic #next{
             width:50px;
             height:50px;
             position: absolute;
@@ -50,17 +51,17 @@
             right:10px;
             background: url("images/next.png") no-repeat;
         }
-        #pic ul{}
-        #pic ul li{
-            position: absolute;
-            top:0;
-            left:0;
-        }
+        /*#pic ul{}*/
+        /*#pic ul li{*/
+            /*position: absolute;*/
+            /*top:0;*/
+            /*left:0;*/
+        /*}*/
+
         #list{
             position: absolute;
             bottom:50px;
             left: 600px;
-
         }
         #list li{
             position: relative;
@@ -92,6 +93,12 @@
 
         var arrPic = [];
         var arrSpic = [];
+        var Fir = 0;
+
+        //初始化
+        function fnTab(){
+
+        };
         //获取里标签里的大图片
         for(var i = 0;i<aLi1.length;i++){
             var aPic = aLi1[i].getElementsByTagName('img')[0];
@@ -124,8 +131,8 @@
                     for (var j = 0; j < aTip.length; j++) {
                         aTip[j].src = 'images/tip.png';
                         aTip[this.index].src = 'images/tip_push.png';
+
                         arrSpic[this.index].className = 'spic';
-                        //arrSpic[this.index].style.top =
                         var num = this.index + 1;
                         arrSpic[this.index].src = 'images/' + num + '.jpg';
                     }
@@ -136,7 +143,7 @@
         };
 
         //prev实现
-        oPrev.oncli = function(){
+        oPrev.onclick = function(){
 
         }
     };
@@ -153,7 +160,7 @@
         </ul>
         <span id="prev"></span>
         <span id="next"></span>
-    </div>
+    </div>d
 <ul id="list">
     <li>
         <img class="tip" src="images/tip.png" />
