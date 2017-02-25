@@ -147,6 +147,14 @@
             }
             fnTab();
         };
+        oPrev.onclick = function(){
+            oNum--;
+            if(oNum < 0){
+                alert('这是第一张');
+                oNum = 0;
+            }
+            fnTab();
+        };
 
     };
 </script>
