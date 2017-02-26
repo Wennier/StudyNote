@@ -91,6 +91,7 @@
         var aTip = [];
         var arrImg = [];
         var oNum = 0;
+        var onOff = true;
 
         //初始化
         function fnTab (){
@@ -120,21 +121,40 @@
             aLi[i].onclick = function(){
                 var num = this.index + 1;
                 oImg.src = 'images/' + num + '.jpg';
+                onOff = false;
+
             };
             //鼠标抚摸出现缩略图
 
             aLi[i].onmouseover = function(){
+                var img0 = this.getElementsByTagName('img')[0];
+                var img1 = this.getElementsByTagName('img')[1];
 
-                this.getElementsByTagName('img')[0].src = 'images/tip1.png';
-                this.getElementsByTagName('img')[1].className = 'spic';
+                for(var i = 0;i<aLi.length;i++){
+                    img0.src = 'images/tip.png';
+                }
+
+                img0.src = 'images/tip1.png';
+                img1.className = 'spic';
                 var num = this.index + 1;
-                this.getElementsByTagName('img')[1].src = 'images/'+ num +'.jpg';
+                img1.src = 'images/'+ num +'.jpg';
             };
+
             aLi[i].onmouseout = function(){
-                this.getElementsByTagName('img')[0].src = 'images/tip.png';
-                this.getElementsByTagName('img')[1].className = '';
-                this.getElementsByTagName('img')[1].src = '';
-            };
+                var img0 = this.getElementsByTagName('img')[0];
+                var img1 = this.getElementsByTagName('img')[1];
+                if(onOff == true){
+                    img0.src = 'images/tip.png';
+                    img1.className = '';
+                    img1.src = '';
+                }else{
+                    img0.src = 'images/tip1.png';
+                    img1.className = '';
+                    img1.src = '';
+                    onOff = true;
+                }
+                };
+
         }
 
 
