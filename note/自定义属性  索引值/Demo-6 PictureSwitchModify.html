@@ -74,6 +74,7 @@
             top:-66px;
             left:-40px;
         }
+
     </style>
 </head>
 
@@ -92,6 +93,7 @@
         var arrImg = [];
         var oNum = 0;
         var onOff = true;
+        //var selectPosition = 0
 
         //初始化
         function fnTab (){
@@ -121,10 +123,10 @@
             aLi[i].onclick = function(){
                 var num = this.index + 1;
                 oImg.src = 'images/' + num + '.jpg';
-                onOff = false;
+                this.getElementsByTagName('img')[0].src = 'images/tip1.png';
 
             };
-            //鼠标抚摸出现缩略图
+            //鼠标'抚摸出现缩略图
 
             aLi[i].onmouseover = function(){
                 var img0 = this.getElementsByTagName('img')[0];
@@ -143,16 +145,10 @@
             aLi[i].onmouseout = function(){
                 var img0 = this.getElementsByTagName('img')[0];
                 var img1 = this.getElementsByTagName('img')[1];
-                if(onOff == true){
+
                     img0.src = 'images/tip.png';
                     img1.className = '';
                     img1.src = '';
-                }else{
-                    img0.src = 'images/tip1.png';
-                    img1.className = '';
-                    img1.src = '';
-                    onOff = true;
-                }
                 };
 
         }
@@ -175,6 +171,7 @@
             }
             fnTab();
         };
+
 
     };
 </script>
@@ -206,6 +203,8 @@
         <img class="tip" src="images/tip.png" />
         <img src=""/>
     </li>
+
+    <div id="div"></div>
 </ul>
 </body>
 </html>

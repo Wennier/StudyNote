@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        label{
+            float: left;
+            margin:0 5px;
+            overflow: hidden;
+            position: relative;
+        }
+        label input{
+            position:absolute;
+            top:-50px;
+            left:-50px;
+
+         }
+        label div{
+            width:100px;
+            height:100px;
+            border:3px solid red;
+        }
+        input:checked~div{
+            background: black;
+        }
+
+    </style>
+</head>
+<body>
+
+<label>
+    <input type="radio" name = 'tab'/>
+    <div>1</div>
+</label>
+<label>
+    <input type="radio" name = 'tab'/>
+    <div>2</div>
+</label>
+<label>
+    <input type="radio" name = 'tab'/>
+    <div>3</div>
+</label>
+
+</body>
+</html>
