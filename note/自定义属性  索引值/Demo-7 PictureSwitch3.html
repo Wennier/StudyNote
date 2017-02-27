@@ -101,11 +101,11 @@
         var bigImg = warpper.getElementsByTagName('img')[0];
         var oPrev = warpper.getElementsByTagName('span')[0];
         var oNext = warpper.getElementsByTagName('span')[1];
-
         var aLi = warpper.getElementsByTagName('li');
         var arrImg = ['url("images/1.jpg")','url("images/2.jpg")','url("images/3.jpg")','url("images/4.jpg")','url("images/5.jpg")'];
 
         var num = 0;
+
         for(var i = 0;i<aLi.length;i++){
             aLi[i].index = i;
             aLi[i].onmouseover = function(){
@@ -138,8 +138,19 @@
             out(this);
         };
         oPrev.onclick = function(){
+            num --;
+            if(num < 0){
+                alert('已是第一张');
+                num = 0;
+            }else {
+                bigImg.src = 'images/'+ (num+1) +'.jpg';
 
+                aLi[num].className = 'active';
+                aLi[num+1].className = '';
+
+            }
         };
+
         var btn;
         function over (btn){
             btn.style.background = 'rgba(0,0,0,0.3)';
