@@ -66,13 +66,96 @@
             background: gray;
             float: left;
             margin-right: 15px;
-
-
+            position: relative;
         }
-        #list li div{}
+        #list li:hover{
+            background: orange;
+        }
+        #list .active{
+            background: orange;
+        }
+        #list li div{
+            position: absolute;
+            width:100px;
+            height:60px;
+            border:2px solid #fff;
+            top:-74px;
+            left:-48px;
+            display: none;
+        }
 
+        #list li div::after{
+            content: '';
+            border-width:10px;
+            border-color: #fff transparent transparent transparent;
+            border-style:solid;
+            position: absolute;
+            top:62px;
+            left:42px;
+        }
     </style>
 </head>
+<script>
+    window.onload = function(){
+        var warpper = document.getElementById('warpper');
+        var bigImg = warpper.getElementsByTagName('img')[0];
+        var oPrev = warpper.getElementsByTagName('span')[0];
+        var oNext = warpper.getElementsByTagName('span')[1];
+
+        var aLi = warpper.getElementsByTagName('li');
+        var arrImg = ['url("images/1.jpg")','url("images/2.jpg")','url("images/3.jpg")','url("images/4.jpg")','url("images/5.jpg")'];
+
+        var num = 0;
+        for(var i = 0;i<aLi.length;i++){
+            aLi[i].index = i;
+            aLi[i].onmouseover = function(){
+                var smallImg = this.getElementsByTagName('div')[0];
+                smallImg.style.display = 'block';
+                smallImg.style.backgroundImage = arrImg[this.index];
+                smallImg.style.backgroundSize = '100px 60px';
+            };
+            aLi[i].onmouseout = function(){
+                var smallImg = this.getElementsByTagName('div')[0];
+                smallImg.style.display = 'none';
+            };
+            aLi[i].onclick = function(){
+                bigImg.src = 'images/'+ (this.index+1) +'.jpg';
+                aLi[num].className = '';
+                num = this.index;
+                this.className = 'active';
+            };
+        }
+        oPrev.onmouseover = function(){
+            over(this);
+        };
+        oNext.onmouseover = function(){
+            over(this);
+        };
+        oPrev.onmouseout = function(){
+            out(this);
+        };
+        oNext.onmouseout = function(){
+            out(this);
+        };
+        oPrev.onclick = function(){
+
+        };
+        var btn;
+        function over (btn){
+            btn.style.background = 'rgba(0,0,0,0.3)';
+            btn.style.fontWeight = 'bolder';
+            btn.style.textShadow = '0 0 10px #fff';
+            btn.style.fontSize = '40px';
+        };
+        function out (btn){
+            btn.style.background = 'rgba(0,0,0,0.5)';
+            btn.style.fontWeight = 'bold';
+            btn.style.textShadow = 'none';
+            btn.style.fontSize = '30px';
+        };
+
+    };
+</script>
 <body>
 
 <div id="warpper">
@@ -81,7 +164,7 @@
     <span id="prev"><</span>
     <span id="next">></span>
     <ul id="list">
-        <li class="lis">
+        <li class = 'active'>
             <div></div>
         </li>
         <li>
