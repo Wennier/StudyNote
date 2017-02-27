@@ -144,10 +144,20 @@
                 num = 0;
             }else {
                 bigImg.src = 'images/'+ (num+1) +'.jpg';
-
                 aLi[num].className = 'active';
                 aLi[num+1].className = '';
 
+            }
+        };
+        oNext.onclick = function(){
+            num ++;
+            if(num == arrImg.length){
+                alert('已是最后一张');
+                num = arrImg.length - 1;
+            }else{
+                bigImg.src = 'images/'+ (num+1) +'.jpg';
+                aLi[num].className = 'active';
+                aLi[num-1].className = '';
             }
         };
 
@@ -164,7 +174,6 @@
             btn.style.textShadow = 'none';
             btn.style.fontSize = '30px';
         };
-
     };
 </script>
 <body>
