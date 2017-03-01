@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        //字符串转换成数字
+        //方法:
+        var a = '100';
+//        alert(Number(a));  100
+        var a1 = '';
+//        alert(Number(a1)); 0
+        var a2 = ['123'];
+//        alert(Number(a2)); //空数组为0，只有一个元素的为相应值
+        var a3 = true;
+//        alert(Number(a3));  true = 1; false = 0;
+//        --------------------------------------
+        var a4;
+//        alert(Number(a4));  NaN
+        var json = {};
+//        alert(Number(json));
+        var a5 = function(){alert(0)};
+//        alert(Number(a5));    NaN
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
