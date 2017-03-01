@@ -6,6 +6,7 @@
     <script>
         //字符串转换成数字
         //方法:
+//        1.Number();
         var a = '100';
 //        alert(Number(a));  100
         var a1 = '';
@@ -21,6 +22,22 @@
 //        alert(Number(json));
         var a5 = function(){alert(0)};
 //        alert(Number(a5));    NaN
+
+
+//        2.parseInt()
+//        从字符串最左边一个字符一个字符检测，发现不是数字即停止转换
+//        3.parseFloat()
+//       从字符串最左边一个字符一个字符检测，遇到小数点将小数点解析出来，常用来转换小数
+
+
+//       判断一个数字是整数还是小数
+        var num = '123.45';
+        if(parseInt(num) == parseFloat(num)){
+            alert(num + '是整数');
+        }else{
+            alert(num + '是小数');
+        }
+
 
     </script>
 </head>
