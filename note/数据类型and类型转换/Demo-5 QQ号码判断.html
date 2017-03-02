@@ -40,28 +40,24 @@
         }
     </style>
 <script>
-    window.onload = function(){
+    window.onload = function() {
         var oText = document.getElementById('text');
         var oBtn = document.getElementById('btn');
 
-        oBtn.onclick = function(){
+        oBtn.onclick = function () {
 
             var num = oText.value;
-            var str = num.toString();
-            if(num == ''){
-                alert('is null');}
-//            }else if(isNaN(num) || typeof (num)!='number'){
-//                alert('bug');
-//            }
-            else if(typeof (num) !='number'){
-                    alert(typeof (num) !='number');
-            } else if(str.charAt(0) == 0){
+            if (num == '') {
+                alert('is null');
+            } else if (isNaN(num) || typeof (parseInt(num)) != 'number') {
+                alert('不是数字');
+            } else if (num.charAt(0) == 0) {
                 alert('the first number is 0');
-            }else if(parseInt(num) != parseFloat(num)){
+            } else if (parseInt(num) != parseFloat(num)) {
                 alert('the number is a decimal');
-            }else if(str.length < 5 || str.length > 10){
+            } else if (num.length < 5 || num.length > 10) {
                 alert('length < 5 or length > 10');
-            }else{
+            } else {
                 alert('success');
             }
         };
