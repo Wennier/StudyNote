@@ -14,9 +14,13 @@
 
             var oUl = document.getElementById('list');
             var aLi = oUl.getElementsByTagName('li');
+            var oP = document.getElementsByTagName('p')[0];
+            var arrSum = [];
 
+            for(var i = 0;i<aLi.length;i++) {
+                sum(aLi[i]);
+            }
 
-            sum(aLi[0]);
             function sum (oLi){
                 var aBtn = oLi.getElementsByTagName('input');
                 var oStrong = oLi.getElementsByTagName('strong')[0];
@@ -24,11 +28,47 @@
                 var oSpan = oLi.getElementsByTagName('span')[0];
                 var num_Strong = Number(oStrong.innerHTML);    // 字符串
                 var num_Single = parseFloat(oEm.innerHTML) ;
+
+
+
                 aBtn[1].onclick = function(){
 
+                    num_Strong ++;
+                    oStrong.innerHTML = num_Strong;
+                    oSpan.innerHTML = num_Strong * num_Single + '元';
+                    arr();
+                    sum1();
+                };
+                aBtn[0].onclick = function(){
+
+                    num_Strong --;
+                    if( num_Strong < 0 ){
+                        num_Strong = 0;
+                    }
+                    oStrong.innerHTML = num_Strong;
+                    oSpan.innerHTML = num_Strong * num_Single + '元';
+                    arr();
+                    sum1();
                 };
 
             };
+
+            function arr(){
+                for( var i = 0;i<aLi.length;i++ ){
+
+                    var oSpan = aLi[i].getElementsByTagName('span')[0];
+                    arrSum[i] = parseFloat(oSpan.innerHTML);
+
+                }
+
+            }
+            function sum1() {
+                var num = 0;
+                for(var i = 0;i<arrSum.length;i++){
+                    num = num + arrSum[i];
+                }
+                oP.innerHTML = '商品总价为：' + num + '元' ;
+            }
         };
     </script>
 </head>
@@ -63,7 +103,7 @@
         总计：<span>0元</span>
     </li>
 </ul>
-
+<p>商品总价为：0 元</p>
 
 </body>
 </html>
