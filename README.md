@@ -81,5 +81,13 @@ RWD = Responsive Web Design  以可变尺寸传递网页
 
 HTML表单用于搜集不同类型的用户输入
 表单元素指的是不同类型的input元素，复选框，单选按钮，提交按钮等等
+ `<input>`元素
+ `<select>`元素（下拉列表）
+ &nbsp; `<option>`元素定义带选择的选项。
+ `<textarea>`定义多行输入字段（文本域）
+   `<button>` 元素定义可点击的按钮
+
+
+
 
 
