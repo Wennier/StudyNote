@@ -51,12 +51,21 @@
     };
     fn();
     alert(a);
-     */
+
 
     var a = 1;          //仓库中加入全局变量 var a 和函数fn
     function fn(){
         alert(a);
         a = 2;          //代码运行到alert时，先在局部函数找有没有 a 再在全局变量中找
+    };
+    fn();
+    alert(a);
+     */
+
+    var a = 1;
+    function fn(a){     //当代码运行发现未定义的参数 a 时，直接将 a 放进仓库
+        alert(a);
+        a = 2;
     };
     fn();
     alert(a);
