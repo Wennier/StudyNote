@@ -9,7 +9,12 @@
     //域:空间，范围，区域......
     //作用：读，写
 
-   /*
+    /*
+    script 全局变量，全局函数
+    自上而下
+
+
+
     浏览器：
         “JS解析器”
         （1）“找一些东西”：var function 参数
@@ -25,7 +30,7 @@
         （2）逐行解读代码:
             表达式：= + - * / % ++ -- ！ 参数
             表达式可以修改预解析的值！
-   */
+
     alert(a);
     var a = 1;              //var a 进入仓库
     alert(a);
@@ -35,10 +40,16 @@
     alert(a);
     function a(){alert(4);} //a = function a(){alert(4);} 进入仓库，覆盖前边的函数
     alert(a);
-    var a = 5;
+    */
+
+    var a = 1;          //仓库中加入全局变量 var a 和函数fn
+    function fn(){
+        alert(a);       //仓库中加入局部变量 var a ;
+        var a = 2;      //代码运行到alert时，先在局部函数找有没有 a 再在全局变量中找
+    };
+    fn();
     alert(a);
-    function a(){alert(6);} //a = function a(){alert(6);} 进入仓库，覆盖前边的函数
-    alert(a);
+
 </script>
 <body>
 
