@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script>
+    //作用域：
+    //域:空间，范围，区域......
+    //作用：读，写
+
+   /*
+    浏览器：
+        “JS解析器”
+        （1）“找一些东西”：var function 参数
+
+            a = ...
+                所有的变量，在正式运行代码之前，都提前赋了一个值：未定义
+            fn1 = function fn1（）{alert（2）；}
+                所有的函数，在正式运行之前，都是整个代码块
+
+            js域解析
+                遇到重名的：只留一个
+                变量和函数重名了，就只留下函数
+        （2）逐行解读代码:
+            表达式：= + - * / % ++ -- ！ 参数
+            表达式可以修改预解析的值！
+   */
+    alert(a);
+    var a = 1;              //var a 进入仓库
+    alert(a);
+    function a(){alert(2);} //a = function a(){alert(2);} 进入仓库，重名替换 var a
+    alert(a);
+    var a = 3;
+    alert(a);
+    function a(){alert(4);} //a = function a(){alert(4);} 进入仓库，覆盖前边的函数
+    alert(a);
+    var a = 5;
+    alert(a);
+    function a(){alert(6);} //a = function a(){alert(6);} 进入仓库，覆盖前边的函数
+    alert(a);
+</script>
+<body>
+
+</body>
+</html>
