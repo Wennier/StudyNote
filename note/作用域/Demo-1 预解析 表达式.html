@@ -13,6 +13,8 @@
     script 全局变量，全局函数
     自上而下
 
+    函数
+    由里而外（作用域链）
 
 
     浏览器：
@@ -40,12 +42,21 @@
     alert(a);
     function a(){alert(4);} //a = function a(){alert(4);} 进入仓库，覆盖前边的函数
     alert(a);
-    */
+
 
     var a = 1;          //仓库中加入全局变量 var a 和函数fn
     function fn(){
         alert(a);       //仓库中加入局部变量 var a ;
         var a = 2;      //代码运行到alert时，先在局部函数找有没有 a 再在全局变量中找
+    };
+    fn();
+    alert(a);
+     */
+
+    var a = 1;          //仓库中加入全局变量 var a 和函数fn
+    function fn(){
+        alert(a);
+        a = 2;          //代码运行到alert时，先在局部函数找有没有 a 再在全局变量中找
     };
     fn();
     alert(a);
