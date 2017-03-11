@@ -60,7 +60,6 @@
     };
     fn();
     alert(a);
-     */
 
     var a = 1;
     function fn(a){     //当代码运行发现未定义的参数 a 时，直接将 a 放进仓库
@@ -69,6 +68,14 @@
     };
     fn();
     alert(a);
+     */
+    var a = 1;
+    function fn(a){     //逐行解读代码时，遇到函数从参数开始读
+        alert(a);       // 1
+        a = 2;
+    };
+    fn(a);
+    alert(a);           // 1
 
 </script>
 <body>
