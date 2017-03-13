@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        window.onload  = function(){
+            var aLi = document.getElementsByTagName('li');
+            var arr = ['red','yellow','blue'];
+            for(var i = 0;i<aLi.length;i++){
+                aLi[i].style.background = arr[i%3];
+            }
+        };
+    </script>
+</head>
+<body>
+
+<ul>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+
+</body>
+</html>
