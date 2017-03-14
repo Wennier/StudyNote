@@ -13,14 +13,16 @@
         window.onload  = function(){
             var aLi = document.getElementsByTagName('li');
             var arr = ['red','yellow','blue'];
+            var str = '';
             for(var i = 0;i<aLi.length;i++){
                 aLi[i].index = i;
                 aLi[i].style.background = arr[i%arr.length];
                 aLi[i].onmouseover = function(){
+                    str = this.style.background;
                     this.style.background = 'gray';
                 };
                 aLi[i].onmouseout = function(){
-                    this.style.background = arr[this.index % arr.length];
+                    this.style.background = str;
                 };
             }
         };
