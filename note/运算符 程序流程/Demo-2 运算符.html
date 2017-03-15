@@ -14,6 +14,7 @@
             var aLi = document.getElementsByTagName('li');
             var arr = ['red','yellow','blue'];
             var str = '';
+            var str1 = '';
             for(var i = 0;i<aLi.length;i++){
                 aLi[i].index = i;
                 aLi[i].style.background = arr[i%arr.length];
@@ -23,6 +24,15 @@
                 };
                 aLi[i].onmouseout = function(){
                     this.style.background = str;
+                };
+
+                aLi[i].onclick = function(){
+                    for(var i = 0;i<aLi.length;i++){
+                        aLi[i].style.background = arr[i%arr.length];
+                    }
+                    this.style.background = 'black';
+                    str = this.style.background;
+                    str1 = this.style.background;
                 };
             }
         };
