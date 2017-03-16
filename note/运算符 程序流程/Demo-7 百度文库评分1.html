@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        *{
+            margin:0;padding:0;
+        }
+        #warpper{
+            position: relative;
+        }
+        #warpper span{
+            display: inline-block;
+            font-size: 20px;
+            position: absolute;
+            top:100px;
+            left:200px;
+            font-weight: bold;
+        }
+        #roll{
+            position: absolute;
+            top:102px;
+            left:300px;
+        }
+        #roll ul{
+        }
+        #roll ul li{
+            display: inline;
+            list-style: none;
+            width:20px;
+            height:20px;
+            border-radius: 45px;
+            background: darkred;
+            float: left;
+            margin-right: 6px;
+        }
+        #tip{
+            width:200px;
+            height:40px;
+            border:1px solid wheat;
+            position: absolute;
+            background: wheat;
+            top:-15px;
+            left:140px;
+        }
+        #tip:before{
+            content: '';
+            width:0;
+            height:0;
+            border-right: 10px solid wheat;
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+            position: absolute;
+            top:12px;
+            left:-10px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="warpper">
+    <span>总体评价：</span>
+    <div id="roll">
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <div id="tip"></div>
+    </div>
+</div>
+
+</body>
+</html>
