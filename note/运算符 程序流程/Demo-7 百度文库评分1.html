@@ -10,7 +10,7 @@
         #warpper{
             position: relative;
         }
-        #warpper span{
+        #warpper #title{
             display: inline-block;
             font-size: 20px;
             position: absolute;
@@ -35,7 +35,7 @@
             float: left;
             margin-right: 6px;
         }
-        #tip{
+        .tip{
             width:200px;
             height:40px;
             border:1px solid wheat;
@@ -44,7 +44,7 @@
             top:-15px;
             left:140px;
         }
-        #tip:before{
+        .tip:before{
             content: '';
             width:0;
             height:0;
@@ -56,20 +56,27 @@
             left:-10px;
         }
     </style>
+    <script>
+        window.onload = function(){
+            var oUl = document.getElementById('list');
+            var aLi = oUl.getElementsByTagName('li');
+        };
+    </script>
 </head>
 <body>
 
 <div id="warpper">
-    <span>总体评价：</span>
+    <span id="title">总体评价：</span>
     <div id="roll">
-        <ul>
+        <ul id="list">
             <li></li>
             <li></li>
             <li></li>
             <li></li>
             <li></li>
         </ul>
-        <div id="tip"></div>
+        <span class="tip">好评</span>
+        <div class="tip"></div>
     </div>
 </div>
 
