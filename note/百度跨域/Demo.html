@@ -41,7 +41,6 @@
         }
         .search{
             width:502px;
-            height:300px;
             border:1px solid #dddddd;
             display: none;
             position: absolute;
@@ -84,6 +83,7 @@
     通过JS代码改变html+css 的属性或者元素  操作DOM
     -->
 <script>
+
     var oText = document.getElementById('text');
     var oSea = document.getElementsByClassName('search')[0];
     var oUl = oSea.getElementsByTagName('ul')[0];
@@ -97,14 +97,16 @@
 //        }
         val?oSea.style.display = 'block':oSea.style.display = 'none';
         var os = document.createElement('script');
-        os.src = '';
-
+        os.src = 'https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd='+val+'&cb=fn';
+        document.body.appendChild(os); //在body添加子节点
     };             //键盘松开
 
-    function xiao(mjson) {
+    function fn(mjson) {
+        oUl.innerHTML = '';
         for (var i = 0;i<mjson.s.length;i++){
             var oLi = document.createElement('li');
-            oLi.innerHTML =
+            oLi.innerHTML = '<a href="https://www.baidu.com/s?wd='+mjson.s[i]+'">'+mjson.s[i]+'</a>';
+            oUl.appendChild(oLi);
         }
     }
 
