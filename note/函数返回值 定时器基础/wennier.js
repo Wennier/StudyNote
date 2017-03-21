@@ -10,4 +10,5 @@ function $( v ){
     }else if(typeof v=== "object"){
         return v;
     }
-};
+}
+
