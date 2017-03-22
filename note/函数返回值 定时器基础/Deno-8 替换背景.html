@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<input type="button" value="换背景吧"/>
+<input type="button" value="停"/>
+
+</body>
+<script>
+    var aInput = document.getElementsByTagName('input');
+    var arrImg = ['img/1.jpg','img/2.jpg','img/3.jpg','img/4.jpg','img/5.jpg'];
+
+    var timer = null;
+    var num = 0;
+    aInput[0].onclick = function(){
+        clearInterval(timer);                   //先关后开
+        timer =  setInterval(function(){
+            document.body.style.background = 'url('+ arrImg[num] +')';
+            num ++;
+            num = num %arrImg.length;
+        },3000);
+    };
+    aInput[1].onclick = function(){
+        clearInterval(timer);
+    };
+</script>
+</html>
