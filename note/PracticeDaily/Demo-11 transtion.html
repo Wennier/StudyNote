@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        #div1{
+            width:100px;
+            height:100px;
+            position: absolute;
+            top: 50px;
+            left:30px;
+            background: #ff9900;
+        }
+    </style>
+    <script src="wennier.js"></script>
+    <script>
+        window.onload = function(){
+            var oBtn = document.getElementById('btn1');
+            var oDiv = document.getElementById('div1');
+
+            oBtn.onclick = function(){
+               alert(getStyle(oDiv,'left'));
+
+            }
+        };
+    </script>
+
+</head>
+<body>
+
+<input id="btn1" type="button" value="按钮"/>
+<div id="div1"></div>
+</body>
+</html>
