@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        #div1{
+            width:100px;
+            height:100px;
+            position: absolute;
+            top: 50px;
+            left:30px;
+            background: #ff9900;
+        }
+    </style>
+    <script src="wennier.js"></script>
+    <script>
+        window.onload = function(){
+            var oBtn1 = document.getElementById('btn1');
+            var oBtn2 = document.getElementById('btn2');
+            var oDiv = document.getElementById('div1');
+            //           var timer = null;
+            //           oDiv.timer = null;
+
+            oBtn1.onclick = function(){
+                doMove(oDiv,'left',10,600,function(){
+                    alert(1);
+                });
+            };
+
+            function doMove (obj,attr,dir,point,endFn){
+                clearInterval(obj.timer);
+
+                /*
+                * 处理参数中的正负值，根据位置判断，当前位置小于目标点时，参数为正，当前位置
+                * 大于目标点时，参数为负；
+                * */
+                dir = parseInt(getStyle(obj,attr)) < point ? dir:(-dir);
+
+                obj.timer = setInterval(function(){
+
+                    var attrLeft = parseInt(getStyle(obj,attr)) + dir;
+
+                    if (attrLeft > point && dir > 0 || attrLeft < point && dir < 0 ){
+                        attrLeft = point;
+                    }
+
+                    obj.style[attr] = attrLeft+ 'px';
+
+                    if(attrLeft == point){
+                        clearInterval(obj.timer);
+
+                        if(endFn){
+                            endFn();
+                        }
+                    }
+                },30);
+            }
+        };
+    </script>
+
+</head>
+<body>
+
+<input id="btn1" type="button" value="Go"/>
+<!--<input id="btn2" type="button" value="向下"/>-->
+<div id="div1"></div>
+</body>
+</html>
