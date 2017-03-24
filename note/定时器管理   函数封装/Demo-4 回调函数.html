@@ -51,9 +51,10 @@
                     if(attrLeft == point){
                         clearInterval(obj.timer);
 
-                        if(endFn){
-                            endFn();
-                        }
+//                        if(endFn){
+//                            endFn();
+//                        }
+                        endFn && endFn();
                     }
                 },30);
             }
