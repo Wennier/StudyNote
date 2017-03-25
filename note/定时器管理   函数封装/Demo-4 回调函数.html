@@ -25,7 +25,7 @@
 
             oBtn1.onclick = function(){
                 doMove(oDiv,'left',10,600,function(){
-                    alert(1);
+                    doMove(oDiv,'height',10,400);
                 });
             };
 
@@ -33,8 +33,9 @@
                 clearInterval(obj.timer);
 
                 /*
-                * 处理参数中的正负值，根据位置判断，当前位置小于目标点时，参数为正，当前位置
-                * 大于目标点时，参数为负；
+                * 在参数中增加一个回调函数作为新的参数，当前的程序执行完成后，紧跟着执行
+                * 回调函数
+                * 在程序执行完成后还需要判断回调函数这个参数是否存在
                 * */
                 dir = parseInt(getStyle(obj,attr)) < point ? dir:(-dir);
 
