@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        img{
+            position: absolute;
+            top:0;
+            bottom:0;
+            left:0;
+            right:0;
+            margin:auto;
+            width:180px;
+        }
+    </style>
+    <script>
+        window.onload = function(){
+
+            var arr =[];
+            var oImg = document.getElementById('img1');
+
+            oImg.onclick = function(){
+                //  采用for循环实现抖动的频率（20，-20，18，-18....0）
+                for(var i=20;i>0;i-=2){
+                    arr.push(i,-i);
+                }
+                arr.push(0);
+                alert(arr);
+            };
+        };
+    </script>
+
+</head>
+<body>
+
+<img  id="img1" src="img/1.jpg" alt="抖动的图片"/>
+
+</body>
+</html>
