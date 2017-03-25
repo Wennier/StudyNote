@@ -14,7 +14,7 @@ function $( v ){
 function getStyle(obj,attr){
 
     return obj.currentStyle?obj.currentStyle[attr]:getComputedStyle(obj)[attr];
-}
+}//获取属性
 function doMove (obj,attr,dir,point,endFn){
     clearInterval(obj.timer);
 
@@ -44,4 +44,19 @@ function doMove (obj,attr,dir,point,endFn){
             endFn && endFn();
         }
     },30);
-}
+}//移动
+function opacity(obj,attrOpacity){
+    clearInterval(obj.opa);
+    obj.opa = setInterval(function(){
+
+        obj.style.opacity = attrOpacity;
+        if(attrOpacity<0){
+            attrOpacity = 0;
+        }
+        attrOpacity -= 0.2;
+
+        if(attrOpacity == 0){
+            clearInterval(obj.opa);
+        }
+    },100);
+}//文字透明度逐渐减小
