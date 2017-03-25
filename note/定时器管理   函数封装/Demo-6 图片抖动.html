@@ -6,27 +6,38 @@
     <style>
         img{
             position: absolute;
-            top:0;
-            bottom:0;
-            left:0;
-            right:0;
-            margin:auto;
+            top:200px;
+            left:400px;
             width:180px;
         }
     </style>
+    <script src="wennier.js"></script>
     <script>
         window.onload = function(){
 
-            var arr =[];
             var oImg = document.getElementById('img1');
 
             oImg.onclick = function(){
+                var arr =[];
+                var timer = null;
+                var num = 0;
+                var attrLeft = parseInt(getStyle(oImg,'left'));
+
                 //  采用for循环实现抖动的频率（20，-20，18，-18....0）
-                for(var i=20;i>0;i-=2){
+                for(var i=10;i>0;i-=2){
                     arr.push(i,-i);
                 }
                 arr.push(0);
-                alert(arr);
+
+                clearInterval(timer);       //开定时器之前要先关闭定时器
+                timer = setInterval(function(){
+                    oImg.style.left = attrLeft + arr[num]+'px';
+                    num++;
+                    if(num === arr.length){
+                        clearInterval(timer);
+                    }
+                },50);
+
             };
         };
     </script>
