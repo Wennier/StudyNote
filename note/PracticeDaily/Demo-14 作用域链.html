@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		window.onload = function(){
+			var b = 10;
+			run();
+			function run(){
+				alert(b);		//undefined
+				var b = 20;
+				return b;
+			}
+			alert(b);			//10
+			alert(run()+10);	//unfined  30
+		};
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
