@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .text{
+            width:400px;
+            height:30px;
+            margin-bottom: 10px;
+        }
+    </style>
+    <script>
+        window.onload = function(){
+            var aInput = document.getElementsByTagName('input');
+
+            var nowTime = null;
+            var newTime = null;
+            var t = 0;
+            var str = '';
+
+            aInput[2].onclick = function(){
+
+                setInterval(function () {
+                    nowTime = new Date();
+                    newTime = new Date(aInput[0].value);
+                    t = Math.floor((newTime - nowTime)/1000);
+
+                    str = Math.floor(t/86400)+'天'+Math.floor(t%86400/3600)+'时'+Math.floor(t%86400%3600/60)+'分'+
+                            Math.floor(t%60)+'秒';
+
+                    aInput[1].value = str;
+                },1000);
+
+            }
+        };
+    </script>
+</head>
+<body>
+
+距离：<input class="text" type="text" value="March 28 2017,20:20:0"/></br>
+还剩：<input class="text" type="text"/>
+<input type="button" value="开始倒计时"/>
+
+</body>
+</html>
