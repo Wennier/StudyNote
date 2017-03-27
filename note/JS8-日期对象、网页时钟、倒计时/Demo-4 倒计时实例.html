@@ -18,18 +18,28 @@
             var newTime = null;
             var t = 0;
             var str = '';
+            var timer = null;
 
             aInput[2].onclick = function(){
 
+                clearInterval(timer);
+
+                newTime = new Date(aInput[0].value);
+
                 setInterval(function () {
+
                     nowTime = new Date();
-                    newTime = new Date(aInput[0].value);
                     t = Math.floor((newTime - nowTime)/1000);
+                    if(t >= 0){
+                        str = Math.floor(t/86400)+'天'+Math.floor(t%86400/3600)+'时'+Math.floor(t%86400%3600/60)+'分'+
+                                Math.floor(t%60)+'秒';
 
-                    str = Math.floor(t/86400)+'天'+Math.floor(t%86400/3600)+'时'+Math.floor(t%86400%3600/60)+'分'+
-                            Math.floor(t%60)+'秒';
+                        aInput[1].value = str;
+                    }else{
+                        clearInterval(timer);
+                        aInput[1].value = '0天 0时 0分 0秒';
+                    }
 
-                    aInput[1].value = str;
                 },1000);
 
             }
