@@ -11,36 +11,37 @@
 
       window.onload = function () {
 
-            fnTime();
-            var timer = null;
-            timer = setInterval(fnTime,1000);
-            function fnTime() {
-                var myTime = new Date();
-                var iYear = myTime.getFullYear();
-                var iMonth = myTime.getMonth()+1;
-                var iDate = myTime.getDate();
-                var iDay = myTime.getDay();
-                var iHour = myTime.getHours();
-                var iSecond = myTime.getSeconds();
-                var iMinute = myTime.getMinutes();
 
-                if(iDay === 0) iDay = "星期日";
-                if(iDay === 1) iDay = "星期一";
-                if(iDay === 2) iDay = "星期二";
-                if(iDay === 3) iDay = "星期三";
-                if(iDay === 4) iDay = "星期四";
-                if(iDay === 5) iDay = "星期五";
-                if(iDay === 6) iDay = "星期六";
+          fnTime();
+          var timer = null;
+          timer = setInterval(fnTime,1000);
+          function fnTime() {
+              var myTime = new Date();
+              var iYear = myTime.getFullYear();
+              var iMonth = myTime.getMonth()+1;
+              var iDate = myTime.getDate();
+              var iDay = myTime.getDay();
+              var iHour = myTime.getHours();
+              var iSecond = myTime.getSeconds();
+              var iMinute = myTime.getMinutes();
 
-                function toTwo (n){
-                   return n<10 ? '0'+n : ''+n ;
-                }
+              if(iDay === 0) iDay = "星期日";
+              if(iDay === 1) iDay = "星期一";
+              if(iDay === 2) iDay = "星期二";
+              if(iDay === 3) iDay = "星期三";
+              if(iDay === 4) iDay = "星期四";
+              if(iDay === 5) iDay = "星期五";
+              if(iDay === 6) iDay = "星期六";
 
-                var str = '';
-                str = iYear +'年'+ iMonth +'月'+iDate +'日 '+ iDay+' '+toTwo(iHour)+':'+toTwo(iMinute)+':'+toTwo(iSecond);
+              function toTwo (n){
+                  return n<10 ? '0'+n : ''+n ;
+              }
 
-                document.body.innerHTML = str;
-            }
+              var str = '';
+              str = iYear +'年'+ iMonth +'月'+iDate +'日 '+ iDay+' '+toTwo(iHour)+':'+toTwo(iMinute)+':'+toTwo(iSecond);
+
+              document.body.innerHTML = str;
+          }
 
       };
 
