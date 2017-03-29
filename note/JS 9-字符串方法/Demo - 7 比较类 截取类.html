@@ -10,6 +10,22 @@
     * 字符串之间比较时，从第一个字符开始比较，只要不相等便产生结果
     * */
     //alert('abbb'>'ab');
+
+    /*
+    * 截取类：
+    * subString（）；
+    * slice（）；
+    * */
+    var str = '妙味课堂是一支全球独家授课方式的IT团队';
+
+    //alert(str.substring(0,2));
+    //alert(str.substring(2,0));      //可以自动判断参数的大小，进行交换
+    //alert(str.substring(-3,2));     //遇到负数自动更换为0;
+
+    //alert(str.slice(0,2));
+    //alert(str.slice(2,0));            //不会自动判断参数的大小进行交换
+   // alert(str.slice(0,-2));             //可以计算负数
+    alert(str.slice(3,-2));
 </script>
 
 </body>
