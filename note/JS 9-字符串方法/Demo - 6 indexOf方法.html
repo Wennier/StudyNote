@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var str = "wennienrvikieng";
+    var t = 0;
+    var s = 'en';
+    //alert(str.indexOf('n',3));      //  第一个参数表示要找的字符，
+                                    //  第二个参数表示从开始查找的位置
+                                    //  当查找到最后一个完成时，返回-1
+
+    while(str.indexOf(s,t) != -1){
+        alert(str.indexOf(s,t));
+        t = str.indexOf(s,t) + s.length;
+    }
+
+</script>
+
+</body>
+</html>
