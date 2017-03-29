@@ -11,7 +11,11 @@
             aInput[1].onclick = function(){
 
                 var val = aInput[0].value;
-                alert(detectNum(val));
+                if(detectNum(val)){
+                    alert('恭喜全是数字');
+                }else{
+                    alert('输入有误');
+                }
 
             };
             function detectNum(str){
