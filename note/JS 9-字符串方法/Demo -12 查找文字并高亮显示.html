@@ -13,15 +13,15 @@
             font-weight:bold;
         }
         span{
-            color: #fff;
-            background: #ff9900;
+
         }
     </style>
 </head>
 <body>
 
 <input type="text"/>
-<input type="button" value="查找"/>
+<input type="text"/>
+<input type="button" value="替换"/>
 <p>中共中央总书记、国家主席、中央军委主席树习近平29日上午在参加首都义务植树活动时强调，
     植树造林，种下的既是绿色树苗，也是祖国的美好未来。要组织全社会特别是广大青少年
     通过参加植树活动，亲近自然、了解自然、保护自然，培养热爱自然、珍爱生命的生态意识，
@@ -31,15 +31,11 @@
 <script>
     var aInp = document.getElementsByTagName('input');
     var oP = document.getElementsByTagName('p')[0];
-    aInp[1].onclick = function(){
+    aInp[2].onclick = function(){
         var str = aInp[0].value;
+        var insteadStr = aInp[1].value;
 
-        if(!str){
-            return;
-        }else{
-            oP.innerHTML = oP.innerHTML.split(str).join('<span>'+ str +'</span>');
-        }
-
+        oP.innerHTML = oP.innerHTML.split(str).join( insteadStr);
 
     };
 
