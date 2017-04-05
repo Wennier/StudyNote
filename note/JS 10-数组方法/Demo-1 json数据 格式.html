@@ -13,8 +13,19 @@
     var json2 = {name:'vik'};
     var json3 = {'name':'vik'};
 
-    //alert(json3.name);
-    alert(json3['name']);
+    //alert(json3.name);            //  读取
+    //alert(json3['name']);
+
+    json3.name = 'wennier';
+    json3['name'] = 'vik';        //改写
+
+    var arr = [{name:'vik',age:20},{name:'wen',age:19}];        //数组包含json
+
+    //遍历读取
+    var json4 = {name:'vik',age:50,sex:'boy'};
+    for(var attr in json4){
+        alert(json4[attr]);
+    }
 </script>
 
 </body>
