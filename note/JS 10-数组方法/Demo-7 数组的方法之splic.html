@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var arr = ['viking','wennier','juhezi','innofang','leo'];
+
+    //删除
+    //alert(arr.splice(0,2));     //第一个参数表示从哪个位置开始删除，第二个参数表示删除几个元素
+                                //返回值为被删除的元素
+
+
+    //替换
+    //alert(arr.splice(1,2,'老王')); //第一个参数表示从哪个位置开始替换，第二个参数表示从开始位置把几个元素替换掉
+                                //返回值为被替换的元素
+                                //也可以看成先删除再添加
+
+    //添加
+    alert(arr.splice(1,0,'老王'));    //第二个参数为0，表示不删除只添加，无返回值
+</script>
+</body>
+</html>
