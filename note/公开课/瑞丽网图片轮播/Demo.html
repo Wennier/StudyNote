@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		*{
+			margin: 0;padding:0;
+		}
+		#banner{
+			width: 750px;
+			height: 500px;
+			background: darkred;
+			margin: 100px auto;
+			position: relative;
+		}
+		#banner .img{
+			width:6000px;
+			position: absolute;
+			left: -750px;
+		}
+		#banner .img img{
+			width: 750px;
+			height: 500px;
+			float: left;
+		}
+		#banner .gray div{
+			position: absolute;
+			top: 0;
+			width:1000px;
+			height: 500px;
+			background: rgba(0,0,0,0.7);
+		}
+		#banner .gray .left{
+			left: -1000px;
+		}
+		#banner .gray .right{
+			left: 750px;
+		}
+	</style>
+</head>
+<body>
+<div id="banner">
+	<div class="img">
+		<img src="images/1.jpg" alt="img1">
+		<img src="images/2.jpg" alt="img2">
+		<img src="images/3.jpg" alt="img3">
+		<img src="images/4.jpg" alt="img4">
+		<img src="images/5.jpg" alt="img5">
+		<img src="images/6.jpg" alt="img6">
+		<img src="images/7.jpg" alt="img7">
+		<img src="images/8.jpg" alt="img8">
+	</div>
+	<div class="btn"></div>
+	<div class="gray">
+		<div class="left"></div>
+		<div class="right"></div>
+	</div>
+</div>
+	
+</body>
+</html>
