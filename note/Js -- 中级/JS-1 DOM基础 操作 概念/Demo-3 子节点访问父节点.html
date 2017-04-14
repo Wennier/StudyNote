@@ -13,7 +13,8 @@
 		#div2{
 			background: yellow;
 			/*position: absolute;*/
-			float: left;
+			/*float: left;*/
+			zoom:1;
 		}
 		#div3{
 			background: green;
@@ -43,6 +44,8 @@
 	
 	var oDiv3 = document.getElementById('div3');
 
+
+	// alert(document.getElementById('div2').currentStyle.hasLayout);
 	alert(oDiv3.offsetParent.id);
 </script>
 </body>
