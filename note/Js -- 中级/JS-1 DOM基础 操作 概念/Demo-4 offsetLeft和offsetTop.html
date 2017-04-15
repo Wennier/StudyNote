@@ -22,8 +22,7 @@
 		}
 	</style>
 </head>
-<body id="body1">
-
+<body>
 <div id="div1">
 		<div id="div2">
 			<div id="div3"></div>
@@ -33,21 +32,27 @@
 <script type="text/javascript">
 	
 	/*
-		元素.parentNode (只读属性  用来获取当前节点的父节点)
-			！没有兼容问题
+		元素.offsetLeft
+		元素.offsetTop
 
-		元素.offsetParent (只读属性 )
-			* 获取离当前元素最近的一个有定位属性的父级节点
-			* 如果没有明显的定位属性，默认为body
-			* IE7以下，若自身有定位属性，则父级节点是html
-			* 如果当前元素的某个父级触发了layout，那么offsetParent就会指向到这个触发了layout特性的父节点
+		当前元素到定位父级元素的距离
+
+		* 如果没有定位父级  offsetParent -> body
+		* 					offsetLeft[Top] -> html
+		* 					包括body的外边距
+		*
+		* 如果有定位父级
+		* 		ie7 以下：如果自己没有定位属性，那么offsetLeft[Top]是到body的距离
+		* 				：如果自己有定位属性，就是到定位父级元素的距离
+		*
+		* 其他：到定位父级的距离
 	 */
 	
 	var oDiv3 = document.getElementById('div3');
 
-
 	// alert(document.getElementById('div2').currentStyle.hasLayout);
-	alert(oDiv3.offsetParent.id);
+	
+	alert(oDiv3.offsetLeft);
 </script>
 </body>
 </html>
