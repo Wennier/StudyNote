@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		*{
+			margin: 0;padding:0; 
+		}
+		html,body{
+			width: 100%;height: 100%;
+		}
+		body{
+			align-items: center;
+			background-color: #fff;
+			display: flex;
+			font-family: 'Raleway',sans-serif;
+			flex-direction: column;
+			justify-content: center;
+			overflow: hidden;
+		}
+		 #warpper{
+		 	display: flex;
+			background: url(img/background.jpg) center center;
+			border-radius: 100%;
+			min-height: 800px;
+			width: 800px;
+			align-items: center;
+			align-self: center;
+			flex-direction: column;
+			justify-content: center;
+		}
+		h1{
+			width: 50%;
+			color: #fff;
+    		font-family: 'Playfair Display', serif;
+			font-size: 56px;
+			font-weight: bold;
+			line-height: 46px;
+			margin: -10px 0 60px 0;
+			text-align: center;
+			text-shadow: 0px 2px 4px rgba(34,62,66,.75);
+			-webkit-transition: box-shadow 1s ease;
+			transition: box-shadow 1s ease;
+		}
+		#warpper .btn{
+			text-decoration: none;
+			text-transform: uppercase;
+			border-radius: 2px;
+			padding: 14px 30px;
+			color: #fff;
+			font-size: 20px;
+			font-family: 'column';
+			letter-spacing: 1px;
+			box-shadow: 0px 2px 4px rgba(34,62,66,.25);
+			background: linear-gradient(45deg, rgba(255,184,115,0.65) 0%,rgba(255,124,189,0.65) 50%,rgba(108,0,153,0.65) 100%);
+
+		}
+		.btn:hover {
+			box-shadow: 0px 4px 4px rgba(34,62,66,.5);
+			/*-webkit-transition: box-shadow 1s ease;*/
+			transition: box-shadow 1s ease;
+}
+
+	</style>
+</head>
+<body>
+<div id="warpper">
+	<h1>An Unexpected Journey</h1>
+	<a class="btn" href="javascript:;">Get Started</a>
+</div>
+	
+</body>
+</html>
