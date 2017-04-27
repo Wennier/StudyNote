@@ -10,12 +10,53 @@
 
 			var oText = document.getElementById('text1');
 
+			var oBtn = document.getElementById('btn');
+
+			oBtn.onclick = function(){
+				var oLi = document.createElement('li');
+
+				oLi.innerHTML = oText.value;
+
+				/*
+					1.父级.appendChild(被添加的元素);
+						追加子元素
+				 */
+
+				//oUl.appendChild(oLi);
+
+				//oUl.insertBefore(oLi,oUl.children[0]);
+				/*
+					1.父级.insertBefore(添加的元素，被插入的元素);
+					2.当第二个参数不存在时，标准浏览器下默认使用appendChild();IE下报错
+				 */
+				
+				var oA = document.createElement('a');
+				oA.href = "javascript:;";
+				oA.innerHTML = "删除";
+				oA.onclick = function(){
+					oUl.removeChild(this.parentNode);
+				 }
+				oLi.appendChild(oA);
+
+				
+				//处理浏览器的不兼容
+				 if(oUl.children[0]){
+				 	oUl.insertBefore(oLi,oUl.children[0]);
+				 }else{
+				 	oUl.appendChild(oLi);
+				 }
+
+				 
+
+			}
+
 		};
 	</script>
 </head>
 <body>
-	<ul id="ul"></ul>
+	
 	<input type="text" name="" id="text1">
-	<input type="button" name="" value="submite" id="text2">
+	<input type="button" name="" value="留言" id="btn">
+	<ul id="ul"></ul>
 </body>
 </html>
