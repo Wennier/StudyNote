@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			window.onload = function(){
+				/*
+				 
+				 * 可视区的尺寸  : clientWidth / clientHeight
+				 *		document.documentElement.clientWidth
+				 * 		document.documentElement.clientHeight
+				 * 
+				 * 滚动条滚动距离
+				 * 		document.documentElement.scrollTop / scrollLeft
+				 * 		document.body.scrollTop /scrollLeft
+				 * 内容高 
+				 * 		document.documentElement.scrollHeight / Width*/
+				
+				document.onclick = function(){
+					
+					var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+					
+					//alert(scrollTop);
+					
+					alert(document.getElementById('div1').scrollHeight);
+					
+				}
+			};
+		</script>
+	</head>
+	<body style="height: 2000px;">
+		<div id="div1" style="height: 100px; width: 100px; border: 1px solid red; padding: 10px; margin: 10px;">
+			<div id="div2" style="width: 100px; height: 200px;background: cadetblue;">
+				
+				
+			</div>
+		</div>
+	</body>
+</html>
