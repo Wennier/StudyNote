@@ -5,14 +5,20 @@
 	<title>Document</title>
 	<script type="text/javascript">
 		window.onload = function(){
-			var aLi = getElementsByClassName("box");
 
+			var oUl1 = document.getElementById('ul1');
+			var oUl2 = document.getElementById('ul2');
 
+			var aLi = getElementsByClassName(ul1,"box");
+
+			for(var i = 0;i<aLi.length;i++){
+				aLi[i].style.background = 'red';
+			}
 			alert(aLi.length);
 			console.log(aLi);
 
-			function getElementsByClassName ( classname ){
-				var aEls =document.getElementsByTagName("*");
+			function getElementsByClassName (parent,classname ){
+				var aEls = parent.getElementsByTagName("*");
 				var arr = [];
 
 			 	for(var i = 0; i<aEls.length; i++){
@@ -49,7 +55,13 @@
 </head>
 <body>
 
-<ul>
+<ul id="ul1">
+	<li class="box">111111111</li>
+	<li class="box1">222222222</li>
+	<li>33333333333</li>
+	<li class="box box2">444444444</li>
+</ul>
+<ul id="ul2">
 	<li class="box">111111111</li>
 	<li class="box1">222222222</li>
 	<li>33333333333</li>
