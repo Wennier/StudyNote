@@ -5,25 +5,45 @@
 	<title>Document</title>
 	<script type="text/javascript">
 		window.onload = function(){
-			var aLi = getElementsByClassName();
+			var aLi = getElementsByClassName("box");
 
 
-			 alert(aLi.length);
+			alert(aLi.length);
 			console.log(aLi);
 
-			function getElementsByClassName (){
+			function getElementsByClassName ( classname ){
 				var aEls =document.getElementsByTagName("*");
 				var arr = [];
 
-				for(var i = 0; i<aEls.length; i++){
-					if(aEls[i].className == 'box'){
-						arr.push(aEls[i]);
+			 	for(var i = 0; i<aEls.length; i++){
+					// if(aEls[i].className == classname){
+					// 	arr.push(aEls[i]);
+					// }
+					// 
+					var aClassName = aEls[i].className.split(' ');
+
+					for(var j = 0;j<aClassName.length;j++){
+						if(aClassName[j] == classname){
+							arr.push(aEls[i]);
+						}
 					}
 				}
-				return arr;
+			 return arr;
+				
+
 			}
 		};
 	</script>
+
+	
+	<!-- 
+
+		1.只判断遍历到的classname与要查找的是否相同时，假若class=“box box1”是不成立的。所以不能只判断，需改进 
+
+
+	-->
+
+	 
 </head>
 <body>
 
@@ -31,7 +51,7 @@
 	<li class="box">111111111</li>
 	<li class="box1">222222222</li>
 	<li>33333333333</li>
-	<li class="box">444444444</li>
+	<li class="box box2">444444444</li>
 </ul>
 	
 </body>
