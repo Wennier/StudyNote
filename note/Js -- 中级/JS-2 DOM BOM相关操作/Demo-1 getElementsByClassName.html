@@ -25,6 +25,7 @@
 					for(var j = 0;j<aClassName.length;j++){
 						if(aClassName[j] == classname){
 							arr.push(aEls[i]);
+							break;
 						}
 					}
 				}
@@ -39,7 +40,8 @@
 	<!-- 
 
 		1.只判断遍历到的classname与要查找的是否相同时，假若class=“box box1”是不成立的。所以不能只判断，需改进 
-
+		2.改进方法是先将遍历到的元素的className根据空格字符分割，再循环遍历进行判断是否相等，缺陷是当某个元素的属性class="box box"改元素会被放进数组两次
+		3.改进方法就是当把某个已经相等的元素push进数组后，直接跳出内层循环
 
 	-->
 
