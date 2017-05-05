@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			window.onload = function(){
+				
+				var oDiv = document.getElementById('div1');
+				
+				addClassName(oDiv,'box');
+				
+				function addClassName(obj,classname){
+					if(obj.className == ''){
+						//元素原本没有classname
+						obj.className = classname;
+					
+					}else{
+						
+						var arrName = obj.className.split(' ');
+						var arrIndex = arrIndexOf(arrName,classname);
+						
+						if(arrIndex == -1){
+							//要添加的classname不存在
+							obj.className += ' '+classname;
+						}
+						//要添加的classname已经存在的话，忽略
+					}
+				}
+				
+				function arrIndexOf(arr,index){
+					for(var i = 0;i<arr.length;i++){
+						if(arr[i] == index){
+							return i;
+						}
+					}
+					return -1;
+				}
+			};
+		</script>
+	</head>
+	<body>
+		<div id="div1" class="box1">div1</div>
+	</body>
+</html>
