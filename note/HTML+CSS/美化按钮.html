@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			.download_info{
+				text-align: center;
+				margin-top: 50px;
+			}
+			/*默认状态下的按钮效果*/
+			.btn{
+				background-color: #0074cc;
+				*background-color: #05c;
+				
+				/*css3渐变制作背景图片*/
+				background-image: -ms-linear-gradient(top,#08c,#05c);
+				background-image: -webkit-gradient(linear,0 0,0 100%,from(#08c),to(05c));
+				background-image: -webkit-linear-gradient(top,#08c,#05c);
+				background-image: -moz-linear-gradient(top,#08c,#05c);
+				background-image: linear-gradient(top,#08c,#05c);
+				background-repeat: repeat-x;
+				*display: inline;
+				border: 1px solid #cccccc;
+				*border: 0;
+				border-color: #ccc;
+				/*css3的色彩模块*/
+				border-color: rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);
+				border-radius: 6px;
+				color: #FFFFFF;
+				cursor: pointer;
+				font-size: 20px;
+				font-weight: normal;
+				line-height: normal;
+				padding: 14px 24px;
+				text-align: center;
+				filter: progid:DXImageTransform.Microsoft.gradient(starColorstr='#08c',endColorstr = '05c',GradientType=0);
+				filter: progid:DXImageTransform.Microsoft.gradient(enable=false);
+				/*文字阴影特效*/
+				text-shadow: 0 -2px 0 rgba(0,0,0,0.25);
+				text-decoration: none;
+				vertical-align: middle;
+				*zoom: 1;
+
+			}
+			.btn:hover{
+				background-position: 0 -15px;
+				background-color: #0055CC;
+				*background-color: #004ab3;
+				color: #fff;
+				text-decoration: none;
+				text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+				/*css3动画效果*/
+				
+			}
+		</style>
+	</head>
+	<body>
+		<div class="download_info">
+			<a href="#" class="btn">View project on github</a>
+		</div>
+	</body>
+</html>
