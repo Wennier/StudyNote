@@ -43,6 +43,35 @@
 				padding: 10px 10px;
 				text-shadow: 2px 2px 2px #aeaeae;			
 			}
+			.accordionMenu :target h2 a,
+			.accordionMenu h2 a:focus,
+			.accordionMenu h2 a:hover,
+			.accordionMenu h2 a:active
+			{
+				background: #28d;
+				background: -webkit-linear-gradient(top,#6bb2ff,#28d);
+				background: -moz-linear-gradient(top,#6bb2ff,#28d);
+				background: linear-gradient(top,#6bb2ff,#28d);
+				color: #fff;
+				
+			}
+			.accordionMenu p{
+				margin: 0;
+				height: 0;
+				overflow: hidden;
+				padding: 0 10px;
+				-webkit-transition: height 0.5s ease-in-out;
+				-moz-transition: height 0.5s ease-in-out;
+				/*-o-transition: height 0.5s ease-in-out;*/
+				transition: height 0.5s ease-in-out;	
+			}
+			.accordionMenu :target p{
+				height: 100px;
+				overflow: auto;
+			}
+			.accordionMenu :target h2:before{
+				border-color: transparent transparent transparent #fff;
+			}
 			
 		</style>
 	</head>
