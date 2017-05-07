@@ -5,13 +5,45 @@
 		<title>垂直手风琴</title>
 		<style>
 			.accordionMenu{
-				background: #FFB6C1;
+				background: #98FB98;
 				color: #424242;
 				font: 12px arial,verdana,sans-serif;
 				margin: 0 auto;
 				padding:10px;
 				width: 500px;
 			}
+			.accordionMenu h2{
+				margin: 5px 0;
+				padding: 0;
+				position: relative;
+			}
+			.accordionMenu h2:before{
+				content: '';
+				border: 5px solid #fff;
+				border-color: #fff transparent transparent transparent;
+				height: 0;
+				position: absolute;
+				top: 15px;
+				right: 10px;
+				width: 0;
+				
+			}
+			.accordionMenu h2 a{
+				text-decoration: none;
+				background: #8f8f8f;
+				background: -webkit-linear-gradient(top,#cecece,#8f8f8f);
+				background: -moz-linear-gradient(top,#cecece,#8f8f8f);
+				background: linear-gradient(top,#cecece,#8f8f8f);
+				border-radius: 5px;
+				color: #424242;
+				display: block;
+				font-size: 13px;
+				font-weight: normal;
+				margin: 0;
+				padding: 10px 10px;
+				text-shadow: 2px 2px 2px #aeaeae;			
+			}
+			
 		</style>
 	</head>
 	<body>
