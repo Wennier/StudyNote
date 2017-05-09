@@ -15,7 +15,10 @@
 				 
 				 * text : 当光标离开的时候如果内容有变化就触发
 				 * radio : 标准下点击的时候只要值变了那么就会触发
-				 * 			非标准下焦点离开的时候如果值变了就会触发*/
+				 * 			非标准下焦点离开的时候如果值变了就会触发
+				 * 
+				 * checkbox :  点击的时候只要值变了那么就会触发
+				 * */
 				oForm.text1.onchange = function(){
 					
 					alert(this.value);
@@ -29,10 +32,33 @@
 					
 				}
 				
-				alert(oForm.web);
+			//	alert(oForm.web);
 				oForm.web[0].onchange = function(){
 					
 					alert(2);
+					
+				}
+				
+				oForm.city.onchange = function(){
+					alert(this.value);
+				}
+				
+				oForm.btn.onclick = function(){
+					
+					//alert(oForm.sex[0].checked);
+					
+					for(var i = 0;i < oForm.sex.length;i++){
+						
+						if(oForm.sex[i].checked){
+							
+							alert(oForm.sex[i].value + '是选中了');
+							
+						}else{
+							
+							alert(oForm.sex[i].value + '是非选中了的');
+							
+						}
+					}
 					
 				}
 			};
@@ -42,12 +68,21 @@
 		<form id="form1">
 			<input type="text" name="text1" value="wennier" />
 			
-			<input type="radio" name="sex" value="男" />男
+			<input type="radio" name="sex" value="男" checked />男
 			<input type="radio" name="sex" value="女" />女
 			
-			<input type="checkbox" name="web" value="html" />html
+			<input type="checkbox" name="web" value="html" checked/>html
 			<input type="checkbox" name="web" value="css" />css
 			<input type="checkbox" name="web" value="javascript" />javascript
+			
+			<select name="city" value="">
+				<option value="">请选择城市</option>
+				<option value="上海" selected>上海</option>
+				<option value="北京">北京</option>
+				<option value="广州">广州</option>
+			</select>
+			
+			<input type="button" name="btn" value="点击" />
 		</form>
 	</body>
 </html>
