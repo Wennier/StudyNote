@@ -7,13 +7,47 @@
 			window.onload = function(){
 				var oForm = document.getElementById('form1');
 				
-				alert(oForm.text1.value);
+				//alert(oForm.text1.value);
+				
+				//onchange : 当值发生改变的时候触发
+				
+				/*
+				 
+				 * text : 当光标离开的时候如果内容有变化就触发
+				 * radio : 标准下点击的时候只要值变了那么就会触发
+				 * 			非标准下焦点离开的时候如果值变了就会触发*/
+				oForm.text1.onchange = function(){
+					
+					alert(this.value);
+					
+				}
+				
+			//	alert(oForm.sex);	//	数组
+				oForm.sex[0].onchange = function(){
+					
+					alert(1);
+					
+				}
+				
+				alert(oForm.web);
+				oForm.web[0].onchange = function(){
+					
+					alert(2);
+					
+				}
 			};
 		</script>
 	</head>
 	<body>
 		<form id="form1">
 			<input type="text" name="text1" value="wennier" />
+			
+			<input type="radio" name="sex" value="男" />男
+			<input type="radio" name="sex" value="女" />女
+			
+			<input type="checkbox" name="web" value="html" />html
+			<input type="checkbox" name="web" value="css" />css
+			<input type="checkbox" name="web" value="javascript" />javascript
 		</form>
 	</body>
 </html>
