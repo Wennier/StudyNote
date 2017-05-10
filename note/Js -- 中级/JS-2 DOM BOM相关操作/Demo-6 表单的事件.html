@@ -14,9 +14,21 @@
 					}
 				}
 				
-				setTimeout(function(){
-					oForm.submit();
-				},1000);
+				oForm.onreset = function(){
+					
+//					var re = confirm('确定要重置么？');
+//					if(re){
+//						return true;
+//					}else{
+//						return false;
+//					}
+
+					return confirm('确定要重置么？');
+					
+				}
+//				setTimeout(function(){
+//					oForm.submit();
+//				},1000);
 					
 				
 			};
@@ -24,12 +36,15 @@
 		</script>
 		
 		<!--onsubmit : 事件 当提交表单的时候触发
+			onreset : 当提交的表单重置的时候触发
 		submit() : 方法 	提交表单-->
 	</head>
 	<body>
 		<form id="form1" action="http://www.baidu.com">
 			<input type="text" name="text1" />
+			<input type="text" name="text2" value="22222" />
 			<input type="submit" name="dosubmit" value="提交" />
+			<input type="reset" name="dosubmit" value="重置" />
 		</form>
 	</body>
 </html>
