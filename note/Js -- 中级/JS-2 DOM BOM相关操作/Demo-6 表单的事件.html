@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			window.onload = function(){
+				var oForm = document.getElementById('form1');
+				
+				oForm.onsubmit = function(){
+					if(this.text1.value == ''){
+						alert("请输入内容！");
+						return false;
+					}
+				}
+				
+				setTimeout(function(){
+					oForm.submit();
+				},1000);
+					
+				
+			};
+				
+		</script>
+		
+		<!--onsubmit : 事件 当提交表单的时候触发
+		submit() : 方法 	提交表单-->
+	</head>
+	<body>
+		<form id="form1" action="http://www.baidu.com">
+			<input type="text" name="text1" />
+			<input type="submit" name="dosubmit" value="提交" />
+		</form>
+	</body>
+</html>
