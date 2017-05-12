@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			/*
+			 
+			 * 焦点 : 如果一个元素有焦点的话，会相应用户的操作
+			 * 		使浏览器能够接受或者区分用户输入的对象，当一个元素有焦点的时候，可以接收用户的输入。
+			 * 		通过一些方式给元素设置焦点
+			 * 			1.点击
+			 * 			2.tab
+			 * 			3.js
+			 * 		不是所有元素都能够接收焦点，能够响应用户操作的元素才有焦点*/
+			window.onload = function(){
+				
+				var oText = document.getElementById('text1');
+				
+				oText.onfocus = function(){
+					
+					if(oText.value === '请输入内容'){
+						
+						oText.value = '';
+						
+					}
+					
+				}
+				oText.onblur = function(){
+					
+					if(oText.value == ''){
+						
+						oText.value = '请输入内容';
+					}
+					
+				}
+			};
+		</script>
+	</head>
+	<body>
+		<input type="text" id="text1" value="请输入内容" />
+	</body>
+</html>
