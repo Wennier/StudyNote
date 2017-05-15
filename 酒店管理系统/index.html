@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        #logo{
+        	width: 100%;
+        	height: 80px;
+        	background: #fff;
+        	border-bottom: 4px solid #BDBDBD;
+        }
+        #logo .logo_img{
+        	position: absolute;
+        	top: 0;
+        	left: 0;
+        	z-index: 1;
+        }
+        .bg {
+            width:100%;
+            height:580px;
+            position:fixed;
+            background: black;
+        }
+        
+
+        .bg ul{
+            height:580px;
+        }
+        .bg ul li{
+            width:100%;
+            height:100%;
+            position: absolute;
+            display: none;
+            list-style: none;
+        }
+        .bg ul li:nth-child(1){
+            background:url('img/1.jpg') no-repeat;
+            background-size: cover;
+            display: block;
+        }
+        .bg ul li:nth-child(2){
+            background:url('img/2.jpg') no-repeat;
+            background-size: cover;
+        }
+        .bg ul li:nth-child(3){
+            background:url('img/3.jpg') no-repeat;
+            background-size: cover;
+        }
+        .bg ul li:nth-child(4){
+            background:url('img/4.jpg') no-repeat;
+            background-size: cover;
+        }
+        
+        #title{
+            width:1090px;
+            height:66px;
+            position: absolute;
+            top:-65px;
+            left:50%;
+            margin-left:-545px;
+            z-index: 1;
+
+        }
+        #title .list{
+        	margin-left:140px; 
+        }
+        #title .list a{
+            text-decoration: none;
+            color: #5C3915;
+            font-size: 18px;
+            line-height: 66px;
+            margin-left: 20px;
+            /*font-family: "黑体";*/
+			font-weight: bold;
+
+        }
+        #title .login {        	
+            float: right;
+            margin-right: 30px;
+            margin-top: 20px;
+            color: #fff;         
+        }
+        #title .login a, #title .regist a{
+        	display: inline-block;
+        	width: 80px;line-height: 30px;
+			text-align: center;
+			border:2px solid  #5C3915;
+			border-radius: 10px;
+        }
+        #title .regist {
+            float: right;          
+            color: #fff;
+            margin-top: 20px;
+        }
+        #title a:hover{
+            text-decoration: block;
+            color: #000;
+            transition-duration: 0.5s;
+        }
+
+        .box{
+            width:1090px;
+            height:510px;
+            position: fixed;
+            top:0;bottom: 0;
+            left:0;
+            right:0;
+            margin:auto;
+            overflow: hidden;
+        }
+        .box li{
+           /*font-family: "黑体";*/
+            width:789px;
+            height:438px;
+            list-style: none;
+            position: absolute;
+            top:80px;
+            font-weight: bold;
+
+        }
+        .box ul li:nth-child(1){
+            left:0;
+        }
+        .box ul li:nth-child(2){
+            left:789px;
+        }
+        .box ul li:nth-child(3){
+            left: 889px;
+        }
+        .box ul li:nth-child(4){
+            left:989px;
+        }
+        .box ul li p{
+            position: absolute;
+            top:0;
+            left:0;
+            width:14px;
+            height:100%;
+            background: rgba(0,0,0,0.5);
+            padding:43px;
+            color: #fff;
+            line-height: 26px;
+           
+        }
+
+    </style>
+</head>
+
+
+<body>
+<div id="logo">
+	<div class="logo_img"><img src="img/logo-1.png"></div>
+</div>
+<div class = 'bg'>
+    <div id="title">
+    	<div class="list">
+    		<span><a href="" style="color:#000; ">首页</a></span>
+    		<span><a href="">酒店预订</a></span>
+    		<span><a href="">查看房间</a></span>
+    		<span><a href="">关于我们</a></span>
+    		<!-- <span><a href="">联系我们</a></span> -->
+    		<span class = "login"><a href="">登录</a></span>
+        	<span class = "regist"><a href="">注册</a></span>
+    	</div>
+        
+        
+    </div>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
+<div class="box">
+    <ul>
+        <li>
+            <p>中北酒店—首页介绍</p>
+            <img src="img/1.jpg"/>
+        </li>
+        <li>
+            <p>中北酒店—酒店预订</p>
+            <img src="img/2.jpg"/>
+        </li>
+        <li>
+            <p>中北酒店—优惠活动</p>
+            <img src="img/3.jpg"/>
+        </li>
+        <li>
+            <p>中北酒店—售后服务</p>
+            <img src="img/4.jpg"/>
+        </li>
+    </ul>
+</div>
+<script src="js/jquery-1.11.1.min.js"></script>
+<script>
+    $('.box ul li').hover(function(){
+        var _index = $(this).index();
+        for(var i = 0;i<4;i++){
+            if(i<=_index){
+                $('.box ul li').eq(i).stop().animate({left:i*100+'px'},400)
+
+            }else{
+                $('.box ul li').eq(i).stop().animate({ left:i*100+689+'px'},400)
+            }
+            }
+            $('.bg ul li').eq(_index).fadeIn().siblings().fadeOut();
+        })
+</script>
+
+</body>
+</html>

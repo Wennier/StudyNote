@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>--Current_State--</title>
+	<style type="text/css">
+	*{
+		margin: 0;padding:0; 
+	}
+	body{
+		width: 100%;
+		height: 100%;
+	}
+/*logo标题栏*/
+	#logo {
+		border-bottom:4px solid #BDBDBD; ;
+		height: 80px;
+		width: 100%; 
+		position: relative;
+	}
+	#logo div{
+		margin: 15px 25px;
+	}
+	#logo p{
+		font-size: 20px;
+		color: #5C3915;
+		font-weight: 700;
+		position: absolute;
+		top: 24px;right: 380px;
+	}
+	
+	#logo .btn .return ,#logo .btn .room_info {
+		width: 100px;line-height: 40px;
+		text-align: center;
+		font-size: 18px;
+		font-weight: 700;
+		color: #5C3915;
+		border:2px solid #5C3915;
+		border-radius: 10px;
+		background: #fff;
+		outline: none;
+		cursor: pointer;
+	}
+	#logo .btn .return {
+		position: absolute;
+		top: 10px;right: 80px;
+	}
+	#logo .btn .room_info {
+		position: absolute;
+		top: 10px;right: 200px;
+	}
+/*内容包裹区*/	
+	#warpper{
+		position: relative;
+		overflow: hidden;
+	}
+	#warpper .bg{
+		width: 100%;
+		height: 600px;
+		background: url(img/Info_bg2.jpg) center center;
+		background-size: cover; 
+
+	}
+	#warpper .box{
+		width: 100%;
+		height: 600px;
+		background: rgba(0,0,0,0.3);
+		position: absolute;
+		top: 0;left: 0;
+	}
+	#warpper .box .box_content{
+		width: 65%;
+		height: 450px;
+		background: rgba(0,0,0,0.4);
+		margin:50px auto; 
+		position: relative;
+		/*overflow: scroll;*/
+	}
+	#warpper .box .box_content h2{
+		letter-spacing: 3px;
+		width: 100%;
+		line-height: 90px;
+		font-size: 30px;
+		color: #fff;
+		font-family: "微软雅黑"; 
+		text-align:center;
+		font-weight: normal;
+		position: relative;
+	}
+	#warpper .box .box_content #info{
+		color: #fff;
+	}
+	#warpper .box .box_content #info table {
+		margin:0 auto;
+	}
+	#warpper .box .box_content #info table  th{
+		padding: 15px 40px;
+		font-size: 27px;
+		font-weight: bold;
+	}
+	#warpper .box .box_content #info table  td{
+		padding: 10px 25px;
+		font-size: 25px;
+		text-align: center;
+	}
+
+
+	</style>
+	
+</head>
+<body>
+<div id="parent">
+
+	<!-- logo标题栏 -->
+	<div id="logo">
+		<div><span><img src="img/logo-1.png"></span></div>
+		<form class="btn" action="" method="">
+			<input class="return" type="button" name="return" value="返回首页">
+			<input class="room_info" type="button" name="room_info" value="房间信息">
+		</form>
+		
+	</div>
+	<!--信息表格区-->
+	<div id="warpper">
+		<div><a href=""></a></div>
+		<div class="bg"></div>
+		<div class="box">
+			<div class="box_content">
+				<h2>酒店房间状态</h2>
+				<div id="info">
+					<table border=1>
+						<tr>
+							<th>房间类型</th>
+							<th>房间状态</th>
+							<th>价格</th>
+						</tr>
+						<tr>
+							<td>大床</td>
+							<td></td>
+							<td>138</td>
+						</tr>
+						<tr>
+							<td>标间</td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>商务双床</td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>豪华大床</td>
+							<td></td>
+							<td></td>
+						</tr>									
+					</table>
+				</div>
+			</div>		
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

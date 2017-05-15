@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>--Info_of_room--</title>
+	<style type="text/css">
+	*{
+		margin: 0;padding:0; 
+	}
+	body{
+		width: 100%;
+		height: 100%;
+	}
+/*logo标题栏*/
+	#logo {
+		border-bottom:4px solid #BDBDBD; ;
+		height: 80px;
+		width: 100%; 
+		position: relative;
+	}
+	#logo div{
+		margin: 15px 25px;
+	}
+	#logo p{
+		font-size: 20px;
+		color: #5C3915;
+		font-weight: bold;
+		position: absolute;
+		top: 24px;right: 380px;
+	}
+	#logo input{
+		width: 50px;
+		height: 20px;
+		position: absolute;
+		top: 24px;right: 320px;
+		border:none;
+		font-size: 20px; 
+		color: #5C3915;
+		font-weight: 500;
+	}
+	#logo .in ,#logo .out {
+		width: 60px;line-height: 30px;
+		text-align: center;
+		font-size: 18px;
+		font-weight: 700;
+		color: #5C3915;
+		border:2px solid #5C3915;
+		border-radius: 10px;
+		cursor: pointer;
+	}
+	#logo .in {
+		position: absolute;
+		top: 0px;right: 160px;
+	}
+	#logo .out {
+		position: absolute;
+		top: 0px;right: 80px;
+	}
+/*内容包裹区*/	
+	#warpper{
+		position: relative;
+		overflow: hidden;
+	}
+	#warpper .bg{
+		width: 100%;
+		height: 1000px;
+		background: url(img/Info_bg2.jpg) center center;
+		background-size: cover; 
+
+	}
+	#warpper .box{
+		width: 100%;
+		height: 1000px;
+		background: rgba(0,0,0,0.3);
+		position: absolute;
+		top: 0;left: 0;
+	}
+	#warpper .box .box_content{
+		width: 90%;
+		height: 800px;
+		background: rgba(0,0,0,0.4);
+		margin:100px auto; 
+		position: relative;
+		/*overflow: scroll;*/
+	}
+	#warpper .box .box_content h2{
+		letter-spacing: 3px;
+		width: 100%;
+		line-height: 90px;
+		font-size: 30px;
+		color: #fff;
+		font-family: "微软雅黑"; 
+		text-align:center;
+		font-weight: normal;
+		position: relative;
+	}
+	#warpper .box .box_content #info{
+		width: 1137px;
+		color: #fff;
+		margin: 10px auto; 
+	}
+	#warpper .box .box_content #info table {
+		margin:0 auto; 
+	}
+	#warpper .box .box_content #info table  th{
+		padding: 15px 20px;
+		font-size: 20px;
+		font-weight: bold;
+	}
+	#warpper .box .box_content #info table  td{
+		/*font-family: "微软雅黑";*/
+		padding: 10px 25px;
+		font-size: 18px;
+		text-align: center;
+	}
+/*消息弹框区*/
+	#room_in,#room_out{
+		z-index: 1;
+		position: absolute;
+		width: 400px;
+		height: 600px;
+		top: 200px;
+		left: 50%;		
+		margin-left: -200px;
+		background: #fff;
+		display: none;
+	}
+	#room_in h2,#room_out h2{
+		width: 400px;
+		line-height: 60px;
+		background: #B1B1B1;
+		font-weight: 400;
+		font-size: 24px;
+		color: #fff;
+		text-align:  center;
+		letter-spacing: 3px;
+	}
+	#room_in p,#room_out p{
+		width: 25px;
+		line-height: 25px;
+		text-align: center;
+		position: absolute;
+		top: 0px;
+		right: 0px;
+		font-size: 20px;
+		font-weight: bold;
+		color: #000;
+		cursor:pointer;
+
+	}
+	#room_in p:hover{
+		background: #fff;
+	}
+	#room_out p:hover{
+		background: #fff;
+	}
+	#room_in .info,#room_out .info{
+		border:1px solid #9C9C9C;
+		width: 340px;
+		padding: 1px 10px;
+		margin:30px auto; 
+	}
+	#room_in .info input,#room_out .info input{
+		border:none; 
+		background: rgba(0,0,0,0);
+		line-height: 40px;
+		font-size: 16px;
+		color: gray;
+		font-weight: normal;
+		outline: none; 
+		margin-left: 20px;
+	}
+	#room_in .info label,#room_out .info label{
+		line-height: 40px;
+		margin-left: 10px;
+		color: gray;
+		font-size: 20px;
+	}
+	#room_in .info label font,#room_out .info label font{
+		color:#FD8321;margin-right: 10px;
+	}
+	#room_in .btn,#room_out .btn{
+		margin-left: 20px;
+	}
+	#room_in .btn .confirm,#room_out .btn .confirm{
+		width: 360px;
+		line-height: 50px;
+		font-size: 20px;
+		background: gray;
+		border:none;
+		color: #fff;
+		outline: none;
+		
+	}
+	#room_in .btn .confirm:hover{
+		background: #585858;
+	}
+	#room_out .btn .confirm:hover{
+		background: #585858;
+	}
+
+	</style>
+	<script type="text/javascript">
+		window.onload = function(){
+			var room_in = document.getElementById('room_in');
+			var room_out = document.getElementById('room_out');
+			var close = room_in.getElementsByTagName('p')[0];
+			var close_1 = room_out.getElementsByTagName('p')[0];
+			var logo = document.getElementById('logo');
+			var logo_in =logo.getElementsByClassName('in')[0];
+			var logo_out =logo.getElementsByClassName('out')[0];
+
+
+			logo_in.onclick = function(){
+				room_in.style.display = 'block';
+			};
+			logo_out.onclick = function(){
+				room_out.style.display = 'block';
+			};
+
+			close.onclick = function(){
+				room_in.style.display = 'none';
+			}
+			close_1.onclick = function(){
+				room_out.style.display = 'none';
+
+			}
+		};
+	</script>
+</head>
+<body>
+<div id="parent">
+	<!--入住信息区-->
+	<div id="room_in">
+		<h2>添加客户信息</h2>
+		<p>×</p>
+		<div>
+			<form class="from_group" method="" action="">
+			<div class="info">
+					<label>房间编号</label>
+					<input type="text" name="username" placeholder="请输入房间编号" value="">
+				</div>
+				<div class="info">
+					<label>姓&nbsp;名&nbsp;</label>
+					<input type="text" name="username" placeholder="请输入姓名" value="">
+				</div>
+				<div class="info">
+					<label>证件号&nbsp;</label>
+					<input type="text" name="username" placeholder="请输入证件号" value="">
+				</div>
+				<div class="info">
+					<label>入住日期</label>
+					<input type="text" name="username" placeholder="请输入入住日期" value="">
+				</div>
+				<div class="info">
+					<label>离店日期</label>
+					<input type="text" name="username" placeholder="请输入离店日期" value="">
+				</div>
+				<div class="btn">
+					<input class="confirm" type="submit" name="" value="确定">
+				</div>
+			</form>
+		</div>
+	</div>
+	<!--离店处理区-->
+	<div id="room_out">
+		<h2>客户退房</h2>
+		<p>×</p>
+		<div>
+			<form class="from_group" method="" action="">
+			<div class="info">
+					<label>房间编号</label>
+					<input type="text" name="username" placeholder="请输入房间编号" value="">
+				</div>
+				<div class="info">
+					<label>姓&nbsp;名&nbsp;</label>
+					<input type="text" name="username" placeholder="请输入姓名" value="">
+				</div>
+				<div class="info">
+					<label>入住日期</label>
+					<input type="text" name="username" placeholder="请输入入住日期" value="">
+				</div>
+				<div class="info">
+					<label>离店日期</label>
+					<input type="text" name="username" placeholder="请输入离店日期" value="">
+				</div>
+				<div class="btn">
+					<input class="confirm" type="submit" name="" value="确定">
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<!-- logo标题栏 -->
+	<div id="logo">
+		<div><span><img src="img/logo-1.png"></span></div>
+		<p>当前登录:</p>
+		<input type="text" name="" value="tom">
+		<div class="in">入住</div>
+		<div class="out">离店</div>
+	</div>
+	<!--信息表格区-->
+	<div id="warpper">
+		<div><a href=""></a></div>
+		<div class="bg"></div>
+		<div class="box">
+			<div class="box_content">
+				<h2>酒店房间信息管理</h2>
+				<div id="info">
+					<table border=1>
+						<tr>
+							<th>房间号</th>
+							<th>房间类型</th>
+							<th>房间状态</th>
+							<th>价格</th>
+							<th>入住人姓名</th>
+							<th>入住人证件号</th>
+							<th>入住日期</th>
+							<th>离店日期</th>
+						</tr>
+						<tr>
+							<td>111</td>
+							<td>大床</td>
+							<td>空</td>
+							<td>138</td>
+							<td>jack</td>
+							<td>142625166452362031</td>
+							<td>2017.02.03</td>
+							<td>2013.02.05</td>
+						</tr>
+						<tr>
+							<td>112</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>113</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>114</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>115</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>116</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>117</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>118</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>		
+					</table>
+				</div>
+			</div>		
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

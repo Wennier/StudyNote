@@ -3,7 +3,33 @@
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
+		<script>
+			/*
+			 
+			 * BOM: Browser Object Model 浏览器对象模型*/
+			
+			window.onload = function(){
+				
+				var aInput = document.getElementsByTagName('input');
+				var opener = null;
+				
+				/*
+				 
+				 * window.open(页面的地址url，打开的方式) 打开一个新的窗口（页面）
+				 * 如果url为空，则默认打开一个空白页面
+				 * 如果打开方式为空，默认为新窗口打开方式
+				 * 返回新打开的窗口的window对象*/
+				
+				aInput[0].onclick = function(){
+					
+					opener = window.open();
+					
+				}
+				
+			};
+		</script>
 	</head>
 	<body>
+		<input type="button" value="打开新窗口" />
 	</body>
 </html>

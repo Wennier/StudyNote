@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>registe</title>
+	<style type="text/css">
+	*{
+		margin: 0;padding:0; 
+	}
+	body{
+		width: 100%;
+		height: 100%;
+	}
+	#logo {
+		border-bottom:4px solid #BDBDBD;
+		height: 80px;
+		width: 100%; 
+		position: relative;
+	}
+	#logo div{
+		margin: 15px 25px;
+	}
+	#logo .return_log a{
+		text-decoration: none;
+		width: 120px;line-height: 40px;
+		text-align: center;
+		font-size: 18px;
+		font-weight: 400;
+		color: #5C3915;
+		border:2px solid  #5C3915;
+		border-radius: 10px;
+		position: absolute;
+		top: 10px;right: 80px;
+	}
+	#warpper{
+		position: relative;
+	}
+	#warpper .bg{
+		height: 800px;
+		background: url(img/login_bg1.jpg);
+		background-size: cover;  
+	}
+	#warpper .box{
+		width: 100%;
+		height: 800px;
+		background: rgba(0,0,0,0.4);
+		position: absolute;
+		top: 0;left: 0;
+	}
+	#warpper .box .box_content{
+		width: 500px;
+		height: 600px;
+		background: rgba(0,0,0,0.4);
+		margin:100px auto; 
+		position: relative;
+	}
+	#warpper .box .box_content h2{
+		letter-spacing: 3px;
+		width: 500px;
+		line-height: 90px;
+		font-size: 30px;
+		color: #fff;
+		font-family: "微软雅黑"; 
+		text-align:center;
+		font-weight: normal;
+		position: relative;
+	}
+	#warpper .box .box_content .form-group{
+		border:1px solid #9C9C9C;
+		width: 420px;
+		padding: 1px 10px;
+		margin:30px auto; 
+	}
+	
+	#warpper .box .box_content .form-group input{
+		border:none; 
+		background: rgba(0,0,0,0);
+		height: 40px;
+		padding: 5px 0px 5px 20px;
+		font-size: 20px;
+		color: #fff;
+		font-weight: normal;
+		outline: none; 
+	}
+	#warpper .box .box_content .form-group label{
+		margin-left: 10px;
+		color: #fff;
+		font-size: 22px;
+		
+	}
+	#warpper .box .box_content .form-group label font{
+		color:#FD8321;margin-right: 10px;
+	}
+	#warpper .box .box_content #registe{
+		width: 438px;	
+		margin:30px auto; 
+		border-radius: 2px;
+		position: absolute;
+		bottom: 40px;
+		left: 30px;
+
+	}
+
+	#warpper .box .box_content #registe .login{
+		line-height: 60px;
+		text-decoration: none;
+		color: #fff;
+		text-align: center;
+		font-size: 24px;
+		font-family: "微软雅黑";
+		width: 440px;
+		border:none; 
+		background: rgba(0,0,0,0);
+		background: #A9825A;
+		outline: none;
+	}
+	</style>
+</head>
+<body>
+<div id="logo">
+	<div><span><img src="img/logo-1.png"></span></div>
+	<div class="return_log"><a href="file:///E:/ideaprojects/Note/note/To%20Viking/log_in.html">返回登录</a></div>
+</div>
+<div id="warpper">
+	<div class="bg"></div>
+	<div class="box">
+		<div class="box_content">
+			<h2>管理员注册</h2>
+			<div>
+				<form id="registe" class="information infor1" method="" action="">
+					<div class="form-group">
+						<label><font>*</font>账&nbsp;号</label>
+						<input style="padding-left: 45px;" type="text" name="username" placeholder="请输入账号" value="">
+					</div>					
+					<div class="form-group">
+						<label><font>*</font>姓&nbsp;名</label>
+						<input style="padding-left: 45px;"  type="text" name="username" placeholder="请输入姓名" value="">
+					</div>				
+					<div class="form-group">
+						<label><font>*</font>密&nbsp;码</label>
+						<input style="padding-left: 45px;"  type="password" name="username" placeholder="请输入密码" value="">
+					</div>
+					<div class="form-group">
+						<label><font>*</font>确认密码</label>
+						<input type="password" name="username" placeholder="请再次输入密码" value="">
+					</div>
+					<input class="login" type="submit" name="" value="注&nbsp;&nbsp;&nbsp;&nbsp;册">
+				</form>
+			</div>
+		</div>		
+	</div>
+</div>
+</body>
+</html>

@@ -12,16 +12,20 @@
 			 * 			1.点击
 			 * 			2.tab
 			 * 			3.js
-			 * 		不是所有元素都能够接收焦点，能够响应用户操作的元素才有焦点*/
+			 * 		不是所有元素都能够接收焦点，能够响应用户操作的元素才有焦点
+			 * 
+			 * obj.focus();	使元素获得焦点*/
 			window.onload = function(){
 				
 				var oText = document.getElementById('text1');
+				
+				
 				
 				oText.onfocus = function(){
 					
 					if(oText.value === '请输入内容'){
 						
-						oText.value = '';
+						this.value = '';
 						
 					}
 					
@@ -30,10 +34,11 @@
 					
 					if(oText.value == ''){
 						
-						oText.value = '请输入内容';
+						this.value = '请输入内容';
 					}
 					
 				}
+				oText.focus();
 			};
 		</script>
 	</head>

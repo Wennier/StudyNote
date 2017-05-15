@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{
+				margin: 0;padding: 0;
+			}
+			ul{
+				list-style: none;
+			}
+			div{
+				width: 1150px;
+				height: 600px;
+				margin: 100 auto;
+				border: 1px solid darkred;
+				overflow: hidden;
+			}
+			div li{
+				width: 240px;
+				height: 600px;
+				float: left;
+				background-image: url(img/2.jpg);
+				
+			}
+			div ul{
+				width: 1300px;
+			}
+			
+		</style>
+		<script>
+			window.onload = function(){
+				
+				var box = document.getElementById('box');
+				var oUl = box.children[0];
+				var aLi = oUl.children;
+				
+				//循环遍历 aLi 绑定背景图
+				for(var i = 0;i<aLi.length;i++){
+					
+					aLi[i].style.backgroundImage = "url(img/"+(i+1)+".jpg)";
+					
+					//给每一个li注册鼠标经过事件  鼠标经过后要排他
+					
+					aLi[i].onmouseover = function(){
+						
+						for(var j = 0;j<aLi.length;j++){
+							
+							animate(aLi[j],{'width':100});
+							
+						}
+						animate(this,{'width':800});
+						
+					};
+				}
+				
+				box.onmouseout = function(){
+					
+					for(var i = 0;i<aLi.length;i++){
+						animate(aLi[i],{'width':240});
+					}
+					
+				};
+				
+				function animate(obj,json){
+					clearInterval(obj.timer);
+					obj.timer = setInterval(function(){
+						
+						var flag = true;
+						
+						for(var k in json){
+							var leader = parseInt(getStyle(obj,k)) || 0;
+							var target = json[k];
+							
+							var step = (target - leader)/20;
+							
+							step = step>0? Math.ceil(step): Math.floor(step);
+							
+							leader = leader +step;
+							
+							obj.style[k] = leader +'px';
+							
+							console.log('代码还在运行');
+							
+							if(leader != target){
+								flag = false;
+							}
+							
+						}
+						if(flag){
+							clearInterval(obj.timer);
+						}
+						
+					},15);
+					
+				}
+				
+				function getStyle(obj,attr){
+					
+					if(window.getComputedStyle){
+						return window.getComputedStyle(obj,null)[attr];
+					}else{
+						return obj.currentStyle[attr];
+					}					
+				}
+			};
+		</script>
+	</head>
+	<body>
+		<div id="box">
+			<ul>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+	</body>
+</html>
