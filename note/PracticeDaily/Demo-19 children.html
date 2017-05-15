@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			div{
+				border: 1px solid saddlebrown;
+				
+			}
+			li{
+				
+			}
+		</style>
+		<script>
+			window.onload= function(){
+				var oDiv = document.getElementById('div1');
+				oDiv.children[3].style.background = 'red';
+			};
+		</script>
+	</head>
+	<body>
+		<div id="div1">
+			<div id="div2">111</div>
+			<div id="div3">222</div>
+			<div id="div4">
+				<ul id="ul">
+					<li>555</li>
+					
+					<li>666</li>
+					<li>77</li>
+				</ul>
+			</div>
+			<span>44444</span>
+		</div>
+	</body>
+</html>
