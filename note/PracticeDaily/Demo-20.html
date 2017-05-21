@@ -3,6 +3,50 @@
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
+		<script>
+			window.onload = function(){
+//				(function(){
+//					var a= b = 5;
+//				})();
+//				console.log(b);
+//				console.log(a);
+
+
+//				var m = 1;j = k = 0;
+//				function add(n){
+//					return n = n+1;
+//				}
+//				y=add(m);
+//				function add (n){
+//					return n = n +3;
+//				}
+//				z = add(m);
+//				console.log(y);
+//				console.log(z);
+
+
+//				if(!'a' in window){
+//					var a = 1;
+//				}
+//				alert(a);
+				
+				
+				function foo(){
+					var i = 0;
+					return function(){
+						console.log(i++);
+					}
+				}
+				var f1 = foo();
+				var f2 = foo();
+				
+				f1();
+				f1();
+				f2();
+
+				
+			};
+		</script>
 	</head>
 	<body>
 	</body>
