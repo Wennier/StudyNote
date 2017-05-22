@@ -37,3 +37,33 @@
 	margin:0 26px;
 }
 
+/*菜单*/
+
+.index-menu{
+	height: 500px;
+	position: relative;
+	border-top: 4px solid #f34949;
+}
+.index-menu .menu-tips{
+	width: 156px;
+	height: 72px;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	margin-left: -78px;
+	background: #f34949;
+	text-align: center;
+	line-height: 62px;
+	color: #fff;
+	font-size: 20px;
+	font-weight: bold;
+}
+.index-menu .menu-tips:after{
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	border-left:78px solid transparent ;
+	border-right: 78px solid transparent;
+	border-bottom: 10px solid #fff;
+}
