@@ -40,7 +40,7 @@
 /*菜单*/
 
 .index-menu{
-	height: 500px;
+	/*height: 500px;*/
 	position: relative;
 	border-top: 4px solid #f34949;
 }
@@ -66,4 +66,69 @@
 	border-left:78px solid transparent ;
 	border-right: 78px solid transparent;
 	border-bottom: 10px solid #fff;
+}
+
+/*菜单列表*/
+.menu-list{
+	margin-top: 150px;
+	overflow: hidden;	
+}
+.menu-list ul{
+	width: 1160px;
+}
+.menu-list .menu-item{
+	width: 520px;
+	float: left;
+	margin-right: 60px;
+	margin-bottom: 60px;
+	
+}
+
+
+.menu-list .menu-item .title{
+	float: left;
+	width: 230px;
+	
+}
+
+.menu-list .menu-item .title h4{
+	font-size: 16px;
+	margin-bottom: 7px;
+	color: #555;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.menu-list .menu-item .title .contant{
+	font-size: 12px;
+	color: #b7b7b7;
+}
+.menu-list .menu-item .line{
+	float: left;
+	width: 192px;
+	border: 1px solid #b7b7b7;
+	margin-top: 10px;
+}
+.menu-list .menu-item .price{
+	float: right;
+}
+
+/*菜单更多按钮*/
+.index-menu .menu-more-btn{
+	margin: 0 auto;
+	width: 114px;
+	height: 32px;
+	border: 2px solid #d7d5d5;
+	padding-left:14px;
+	font-size: 14px;
+	color: #b7b7b7;
+	line-height: 32px;
+	margin-top: 92px;
+}
+.index-menu .menu-more-btn .icon{
+	
+
+}
+.index-menu .menu-more-btn .menu-more-line{
+	margin: 0 10px;
 }
