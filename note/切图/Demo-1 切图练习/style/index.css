@@ -166,4 +166,24 @@
 	background: #dedede;
 	border-radius: 10px;
 }
-
+.index-panel .index-panel-header .btn-group .active{
+	background: #9b9b9b;
+}
+.index-panel .index-panel-body{
+	margin-top: 75px;
+}
+.index-food-list{
+	overflow: hidden;
+}
+.index-panel .index-panel-body ul{
+	width: 1160px;
+}
+.index-panel .index-panel-body .food-item{
+	float: left;
+	margin-right: 60px;
+	width: 230px;
+}
+.index-panel .index-panel-body .food-item .banner{
+	height: 202px;
+	margin-bottom: 30px;
+}
