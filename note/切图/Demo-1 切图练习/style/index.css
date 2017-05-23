@@ -126,9 +126,44 @@
 	margin-top: 92px;
 }
 .index-menu .menu-more-btn .icon{
-	
+	display: inline-block;
+	width: 11px;
+	height:7px;
+	background: url("../image/more-icon.png");
 
 }
 .index-menu .menu-more-btn .menu-more-line{
 	margin: 0 10px;
 }
+
+/*panel部分1*/
+.index-panel{
+	margin-top: 200px;
+	/*border: 1px solid red;*/
+}
+.index-panel .index-panel-header h3{
+	font-size: 20px;
+	color: #000;
+	font-weight: bold;
+	float: left;
+	margin-right: 48px;
+}
+.index-panel .index-panel-header .panel-line{
+	float: left;
+	width: 200px;
+	border: 1px solid #e5e3e3;
+	margin-top: 10px;
+}
+.index-panel .index-panel-header .btn-group{
+	font-size: 0;
+	float: right;
+}
+.index-panel .index-panel-header .btn-group .btn{
+	float: left;
+	margin-left: 11px;
+	width: 10px;
+	height: 10px;
+	background: #dedede;
+	border-radius: 10px;
+}
+
