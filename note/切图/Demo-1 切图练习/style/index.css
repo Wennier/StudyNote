@@ -187,3 +187,9 @@
 	height: 202px;
 	margin-bottom: 30px;
 }
+.index-panel .index-panel-body .food-item .name{
+	color:#747474;
+}
+.index-panel .index-panel-body .food-item .name .price{
+	float: right;
+}
