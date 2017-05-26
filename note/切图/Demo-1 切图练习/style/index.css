@@ -207,3 +207,20 @@
 .index-panel .index-panel-body .food-item .star-bar .nostar{
 	background-position: 0 -13px;
 }
+.index-pic{
+	height: 380px;
+	overflow: hidden;
+	margin-bottom: 200px;
+}
+.index-pic .pic-col{
+	float: left;
+}
+.index-pic .pic-col .pic-col-m{
+	width: 353px;
+}
+.index-pic .pic-col .pic-col-s{
+	width: 287px;
+}
+.index-pic .pic-col .pic-col-l{
+	width: 460px;
+}
