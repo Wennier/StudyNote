@@ -106,8 +106,10 @@
 .menu-list .menu-item .line{
 	float: left;
 	width: 192px;
+	height: 0px;
 	border: 1px solid #b7b7b7;
 	margin-top: 10px;
+	
 }
 .menu-list .menu-item .price{
 	float: right;
@@ -130,6 +132,8 @@
 	width: 11px;
 	height:7px;
 	background: url("../image/more-icon.png");
+	margin-top: -5px;
+	
 
 }
 .index-menu .menu-more-btn .menu-more-line{
@@ -152,7 +156,8 @@
 	float: left;
 	width: 200px;
 	border: 1px solid #e5e3e3;
-	margin-top: 10px;
+	margin-top: 12px;
+	height: 0px;
 }
 .index-panel .index-panel-header .btn-group{
 	font-size: 0;

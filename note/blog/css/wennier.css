@@ -5,19 +5,20 @@
 }
 
 .public-banner{
+	position: relative;
 	width: 100%;
-	height: 800px;
+	height: 600px;
 }
 .public-banner .banner-canvas {
 	display: block;
 	width: 100%;
-	height: 800px;
+	height: 600px;
 	background: #21262a;
 }
 
 .public-banner .banner-logo {
 	position: absolute;
-	top: 38%;
+	top: 30%;
 	left: 50%;
 	margin-left: -40px;
 }
