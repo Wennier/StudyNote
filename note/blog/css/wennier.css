@@ -12,15 +12,28 @@
 .public-banner .banner-canvas {
 	display: block;
 	width: 100%;
-	height: 600px;
+	height: 500px;
 	background: #21262a;
 }
-
-.public-banner .banner-logo {
+.banner-vertical{
+	/*display: table-cell;*/
+	/*vertical-align: middle;*/
+}
+.banner-inner{
 	position: absolute;
-	top: 30%;
-	left: 50%;
-	margin-left: -40px;
+	top: 0;bottom: 0;left: 0;right: 0;
+	margin:auto;
+	margin-top: 150px;
+	width: 80%;
+	max-width: 700px;
+	
+}
+.public-banner .banner-logo {
+	
+	display: block;
+	max-width:80px;
+	margin: 0 auto;
+	
 }
 .public-banner .banner-logo img{
 	border-radius: 50%;
@@ -30,14 +43,44 @@
 	background: transparent;
 	display: flex;
 	justify-content: center;
-	/*height: 100%;*/
-	/*line-height: 100%;*/
-	/*top: 0;*/
-	position: absolute;
-	top: 48%;
-	font-size: 50px;
+	margin-bottom: 10px;
+	/*position: absolute;
+	top: 48%;*/
+	font-size: 45px;
 	color: #b88f6f;
-	font-weight: bold;
 	font-family: "微软雅黑";
-	/*border: 1px solid red;*/
+	font-weight: bold;
+	
+}
+.banner-inner .banner-des{
+	width: 100%;
+	color: #fff;
+	font-size:23px ;
+	justify-content: center;
+	font-weight: 300;
+	font-family: 'Noto Serif', serif;
+	text-shadow: 0 1px 3px rgba(0,0,0,0.15);
+	text-align: center;
+}
+/*内容部分*/
+.index-content{
+	position: absolute;
+	top: 420px;
+	left: 50%;
+	margin-left: -500px;
+	width: 1000px;
+	height: 1500px;
+	/*border: 2px solid #666666;*/
+	border-radius: 10px;
+	box-shadow: 0px -6px 15px rgba(255,255,255,0.3),
+				-3px 0 8px #b4b4b4,
+				3px 0 8px #b4b4b4;
+	margin-bottom: 100px;
+	
+	background-image: -webkit-gradient(linear,top,bottom,from(#963),to(#930));
+	background-image:-webkit-linear-gradient(top,rgba(255,255,255,0.7),#b88f6f);
+	background-image:-moz-linear-gradient(top,rgba(255,255,255,0.7,#b88f6f);
+	background-image:-o-linear-gradient(top,#ff6,#f96);
+	background-image:-ms-linear-gradient(top,#ff6,#f96);
+	background-image:linear-gradient(top,#ff6,#f96);
 }
