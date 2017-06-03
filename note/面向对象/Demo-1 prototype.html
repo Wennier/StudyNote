@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			function CreatePerson(name,qq){
+				this.name = name;
+				this.qq = qq;
+			}
+			CreatePerson.prototype.showName = function(){
+				console.log("name = "+this.name);
+			}
+			CreatePerson.prototype.showQQ = function(){
+				console.log("qq = "+this.qq);
+			}
+			
+			var person1 = new CreatePerson("wennier",4526);
+			var person2 = new CreatePerson("viking",456);
+			
+			person1.showName();
+			person1.showQQ();
+			
+			person2.showName();
+			person2.showQQ();
+			
+			console.log(person1.showName() == person2.showName());
+		</script>
+	</body>
+</html>
