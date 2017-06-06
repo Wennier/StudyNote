@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		#div1{
+			width: 300px;
+			height: 500px;
+			background: #8C3131;
+
+		}
+
+	</style>
+</head>
+<body>
+<div id="div1">
+	<p>11111111111</p>
+	<ul id="ul1">
+		<li>22222222</li>
+		<li>33333333</li>
+		<li>444444444444</li>
+		<li>55555555</li>
+	</ul>
+</div>
+
+<!-- 
+	DOM:Document Odject Model 文档对象模型
+	文档:html页面
+	文档对象:页面中的元素
+	文档对象模型:定义为了能让程序(js)去操作页面中的元素
+
+	DOM节点的类型有12种
+	元素节点  -1
+	属性节点  -2
+	文本节点  -3
+
+	元素.childNodes(只读属性  只包含儿子，不包含孙子级别  子节点列表集合)
+		标准下:包含了元素节点和文本节点
+		非标准下:包含了元素节点(IE8以下)
+		对于非嵌套元素，IE7不解析出来
+
+	元素.children(子节点列表  只读属性)
+		标准下：包含元素
+		非标准下：包含元素
+		对于非嵌套元素，IE7不解析出来
+ -->
+	
+<script type="text/javascript">
+	var oUl = document.getElementById('ul1');
+
+	// alert(oUl.childNodes.length);
+
+	alert(oUl.nodeType);
+	
+
+</script>	
+</body>
+
+</html>

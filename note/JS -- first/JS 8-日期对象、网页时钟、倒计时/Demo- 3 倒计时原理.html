@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script>
+        var nowTime = new Date();
+        var newTime = new Date(2017,2,28,19,20,0);
+
+        var t = Math.floor((newTime - nowTime)/1000);//  毫秒  除以1000化成秒，再向下取整去除余数
+
+        var str = Math.floor(t/86400)+'天'+Math.floor(t%86400/3600)+'时'+Math.floor(t%86400%3600/60)+'分'+Math.floor(t%60)+'秒';
+
+        alert(str);
+
+        /*
+        天:Math.floor(t/86400);
+        时:Math.floor(t%86400/3600);
+        分:Math.floor(t%86400%3600/60);
+        秒:Math.floor(t%60);
+        */
+    </script>
+</head>
+<body>
+
+</body>
+</html>

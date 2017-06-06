@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<script>
+    //for in 遍历对象
+    var str = '';
+    var num = 0;
+    for(var attr in document){
+        str += num + ' ' +attr + ':' + document[attr] +'</br>';
+        num++;
+    }
+    document.body.innerHTML = str;
+</script>
+</body>
+</html>

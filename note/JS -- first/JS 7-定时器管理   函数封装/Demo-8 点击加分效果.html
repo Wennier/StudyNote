@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+
+        #div1{
+            position: absolute;
+            width:0;
+            height:60px;
+            margin:200px 400px;
+            background: lightgreen;
+        }
+        #div2{
+            position: absolute;
+            width:470px;
+            height:60px;
+            margin:200px 400px;
+            border:1px solid black;
+        }
+        #list{
+            position: absolute;
+            left:425px;
+            width:470px;
+            height:60px;
+
+        }
+        #list li{
+            position: absolute;
+            top:200px;
+            font-size: 30px;
+            list-style: none;
+            opacity: 1;
+        }
+    </style>
+    <script src="wennier.js"></script>
+    <script>
+        window.onload = function(){
+            var aDiv = document.getElementsByTagName('div');
+            var oUl = document.getElementById('list');
+            var aLi = oUl.getElementsByTagName('li');
+            var str = '';
+            var len = 10;
+            var num = 0;
+
+            //添加li标签
+            for(var i = 0;i<len;i++){
+                str += '<li style="left: '+i*45 +'px;">+1</li>';
+            }
+            oUl.innerHTML = str;
+
+            aDiv[1].onclick = function () {
+
+                var point = parseInt(getStyle(aDiv[1],'width'));
+                var opacity_num = getStyle(aLi[0],'opacity') ;
+
+                doMove(aDiv[0],'width',10,point);
+//                clearInterval(aDiv[0].timer);
+//
+//                aDiv[0].timer = setInterval(function(){
+//                    var attrWidth = parseInt(getStyle(aDiv[0],'width'))+10;
+//                    alert(attrWidth);
+//                    if(attrWidth > point){
+//                        attrWidth = point;
+//                    }
+//                    aDiv[0].style.width = attrWidth +'px';
+//
+//                    if(attrWidth == point){
+//                        clearInterval(aDiv[0].timer);
+//                    }
+//                },10);
+                timer = setInterval(function(){
+                    doMove(aLi[num],'top',10,10);
+                    opacity(aLi[num],opacity_num);
+
+                    num++;
+                    if(num == len){
+                        clearInterval(timer);
+                    }
+                },150);
+            }
+        };
+
+    </script>
+</head>
+<body>
+
+<div id="div1"></div>
+<div id="div2"></div>
+<ul id="list"></ul>
+
+</body>
+</html>

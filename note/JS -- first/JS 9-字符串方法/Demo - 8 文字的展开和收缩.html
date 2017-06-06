@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        p{
+            width: 400px;
+            border:10px solid darkgray;
+            background: lightcyan;
+            color: #000;
+            padding:20px 10px;
+            margin:50px auto;
+        }
+        span{
+
+        }
+    </style>
+    <script>
+        window.onload = function(){
+            var oP = document.getElementsByTagName('p')[0];
+            var oSpan = oP.getElementsByTagName('span')[0];
+            var oA = oP.getElementsByTagName('a')[0];
+
+            var str = oSpan.innerHTML;
+            var onOff = true;
+
+            oA.onclick = function(){
+                if(onOff){
+                    oSpan.innerHTML = str.substring(0, 16);
+                    oA.innerHTML = '>展开';
+                }else{
+                    oSpan.innerHTML = str.substring(0);
+                    oA.innerHTML = '>收缩';
+                }
+                onOff = !onOff;
+            };
+
+        };
+    </script>
+
+</head>
+<body>
+    <p><span>以身教者从。正因父亲的言传身教，习近平将工作看得重如泰山。
+        即使是父亲88岁大寿，中国人很重视的“米寿”，时任福建省省长的
+        习近平也因工作未能回家为父亲祝寿。习近平给父亲写了一封信。
+        信中，习近平提到希望从父亲这里继承和吸取的高尚品质：一是学父亲做人，
+        二是学父亲做事，三是学父亲对信仰的执著追求，四是学父亲的赤子情怀，
+        五是学父亲的俭朴生活。习近平在信中说：“这是一个堪称楷模的老布尔什
+        维克和共产党人的家风</span>...<a href="javascript:;"> >收缩 </a>
+    </p>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        input{
+            width: 50px;
+            height:50px;
+        }
+    </style>
+</head>
+<script>
+    window.onload = function(){
+        var aBtn = document.getElementsByTagName('input');
+        var len = aBtn.length;
+        var arr = ['A','B','C','D'];
+        for(var i = 0;i<len;i++){
+            aBtn[i].num = 0;
+            aBtn[i].onclick = function(){
+                this.value = arr[this.num];
+                this.num ++;
+                if(this.num === arr.length){
+                    this.num = 0;
+                }
+            };
+
+        }
+    };
+</script>
+
+<body>
+
+
+<input type="button" value="0"/>
+<input type="button" value="0"/>
+<input type="button" value="0"/>
+</body>
+</html>

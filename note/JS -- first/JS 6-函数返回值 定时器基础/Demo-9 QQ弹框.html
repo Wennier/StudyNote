@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        #qq{
+            width: 200px;
+            height:400px;
+            background: plum;
+
+        }
+        #title{
+            width:160px;
+            height:180px;
+            position: absolute;
+            top:10px;
+            left:220px;
+            background: deepskyblue;
+            display: none;
+        }
+    </style>
+    <script>
+        window.onload = function(){
+            var qq = document.getElementById('qq');
+            var title = document.getElementById('title');
+
+            var timer = null;
+
+            qq.onmouseover = show;
+            qq.onmouseout = hidden;
+
+            title.onmouseover = show;
+            title.onmouseout = hidden;
+
+            function show(){
+
+                clearTimeout(timer);
+
+                title.style.display = 'block';
+            }
+
+            function hidden(){
+
+                timer = setTimeout(function(){
+
+                    title.style.display = 'none';
+
+                },2000);
+            }
+
+        };
+    </script>
+</head>
+<body>
+
+<div id="qq"></div>
+<div id="title"></div>
+
+</body>
+</html>

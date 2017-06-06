@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        #div1{
+            width:100px;
+            height:100px;
+            position: absolute;
+            top: 50px;
+            left:30px;
+            background: #ff9900;
+        }
+    </style>
+    <script src="wennier.js"></script>
+    <script>
+        window.onload = function(){
+            var oBtn1 = document.getElementById('btn1');
+            var oBtn2 = document.getElementById('btn2');
+            var oDiv = document.getElementById('div1');
+ //           var timer = null;
+ //           oDiv.timer = null;
+
+            oBtn1.onclick = function(){
+                onMove(oDiv,10,800);
+            };
+            oBtn2.onclick = function(){
+                onMove(oDiv,-10,20);
+            };
+
+            function onMove (obj,dir,point){
+                clearInterval(obj.timer);
+                obj.timer = setInterval(function(){
+
+                    var attrLeft = parseInt(getStyle(obj,'left')) + dir;
+
+                    if (attrLeft > point && dir > 0){
+                        attrLeft = point;
+                    }
+                    if(attrLeft < point && dir < 0){
+                        attrLeft = point;
+                    }
+                    obj.style.left = attrLeft+ 'px';
+
+                    if(attrLeft == point){
+                        clearInterval(obj.timer);
+                    }
+                },30);
+            }
+        };
+    </script>
+
+</head>
+<body>
+
+<input id="btn1" type="button" value="向前"/>
+<input id="btn2" type="button" value="向后"/>
+<div id="div1"></div>
+</body>
+</html>

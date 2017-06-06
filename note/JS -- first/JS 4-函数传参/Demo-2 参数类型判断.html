@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+
+        function f1 (a){
+
+            if( typeof a === 'number' && a === a){
+                alert(a + 20);
+            }else if ( typeof a === 'string'){
+                alert(a.charAt(2));
+            }else if( typeof a === 'function'){
+                a();
+            }
+        };
+
+        f1(100);
+        f1('viking');
+        f1(function(){alert('helloworld');});
+    </script>
+</head>
+<body>
+
+</body>
+</html>

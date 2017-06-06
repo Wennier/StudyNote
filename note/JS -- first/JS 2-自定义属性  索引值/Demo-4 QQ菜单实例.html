@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        ul,h2{
+            margin:0;
+            padding:0;
+        }
+        li{
+            list-style: none;
+        }
+        #warpper{
+            width:300px;
+            height:500px;
+            border:1px solid blue;
+            margin:0 auto;
+        }
+        #list{
+            width:240px;
+            height:500px;
+            border:1px solid #333;
+            margin:0 auto;
+        }
+        #list .lis{
+        }
+        .lis h2{
+            height:30px;
+            text-indent: 20px;
+            line-height: 30px;
+            background: url('img/ico1.gif') no-repeat 5px center #6fc;
+        }
+        .lis .active{
+            background: url('img/ico2.gif') no-repeat 5px center #3ff;
+        }
+        .lis ul{
+            display: none;
+        }
+        .lis ul li{
+            line-height: 24px;
+            border-bottom:1px solid black;
+            text-indent: 24px;
+
+        }
+        .lis ul .hover{
+              background: deepskyblue;
+          }
+
+    </style>
+</head>
+<script>
+    window.onload = function () {
+        var oUl = document.getElementById('list');
+        var aH2 = oUl.getElementsByTagName('h2');
+        var aUl = oUl.getElementsByTagName('ul');
+
+        var len = aH2.length;
+        var aLi = null;
+        var arrLi = [];
+        var oldLi = null;
+
+        for(var i =0;i<len;i++){
+             aH2[i].index = i;
+             aH2[i].onclick = function() {
+                 if(this.className==''){
+                     for(var i = 0;i<aUl.length;i++){
+                         aUl[i].style.display = 'none';
+                         aH2[i].className = '';
+
+                     }
+                     aUl[this.index].style.display = 'block';
+                     this.className = 'active';
+                 }else{
+                     aUl[this.index].style.display = 'none';
+                     this.className = '';
+                 }
+                };
+            }
+
+        for(var i = 0;i<aUl.length;i++){
+            aLi = aUl[i].getElementsByTagName('li');
+            for(var j = 0;j<aLi.length;j++){
+                arrLi.push(aLi[j]);
+            }
+        }
+        for(var i = 0;i<arrLi.length;i++){
+            arrLi[i].onclick = function(){
+                for(var i = 0;i<arrLi.length;i++){
+                    arrLi[i].className = '';
+                }
+                this.className='hover';
+            };
+        }
+
+    };
+</script>
+<body>
+
+<div id="warpper">
+    <ul id="list">
+        <li class="lis">
+            <h2>我的好友</h2>
+            <ul>
+                <li>乔云瑞</li>
+                <li>王振哲</li>
+                <li>杨晓南</li>
+                <li>啊港</li>
+            </ul>
+        </li>
+        <li class="lis">
+            <h2>大学同学</h2>
+            <ul>
+                <li>阿哲</li>
+                <li>李风</li>
+                <li>小波</li>
+                <li>二狗</li>
+            </ul>
+        </li>
+        <li class="lis">
+            <h2>黑名单</h2>
+            <ul>
+                <li>榆木</li>
+                <li>笨蛋</li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+</body>
+</html>

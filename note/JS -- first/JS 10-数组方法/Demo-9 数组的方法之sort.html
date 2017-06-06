@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var arr = ['c','f','a','e'];
+
+    arr.sort();
+    //alert(arr);
+
+    var arr1 = [1,4,34,67,8];
+    arr1.sort(function(a,b){
+        return a-b;
+    });
+    //alert(arr1);
+
+    var arr2 = ['56px','3px','100px','25px'];
+
+    arr2.sort(function(a,b){
+        return parseInt(a) - parseInt(b);
+    });
+    //alert(arr2);
+
+    var arr3 = [1,2,3,4,5];
+
+    arr3.sort(function(a,b){
+        return Math.random() - 0.5;
+    });
+
+    alert(arr3);
+
+
+
+    /*
+    * 1.sort排序时根据元素的编码大小进行排序
+    * 2.当数组元素为数字时，默认排序是将数字转化为字符串，然后进行排序。所以要将数字元素按某顺序排序，在sort方法中添加一个函数，
+    *   返回a-b时，表示从小到大排序，返回b-a时表示从大到小排序【参数为int型，返回值为int型】
+    *
+    * 3.当元素为某些单位值时，传进来的参数为字符串，所以要将字符串先转换为int型
+    * 4.随机排序,使用random()方法产生一个 0-1 之间的随机数，与 0.5 做差得到一个大于0或者小于0的数字 ，使得参数进行交换
+    * */
+</script>
+
+</body>
+</html>

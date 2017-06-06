@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script>
+        /*
+        想要获取函数内的值：
+        1.利用全局变量获取函数内的值
+        */
+        var str='';
+        function fn1(){
+            var a = 'viking';
+            str = a;
+        }
+        fn1();
+        //alert(str);
+
+
+        // 2.通过局部函数调用
+        function fn2(){
+            var a = '99克拉';
+            fn3(a);
+        }
+        function fn3(a) {
+            alert(a);
+        }
+
+
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
