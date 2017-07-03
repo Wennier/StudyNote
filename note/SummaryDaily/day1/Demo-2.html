@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+<style type="text/css">
+	.warper{
+		border:1px solid black; 
+	}
+	.div1{
+		width: 100px;
+		height: 100px;
+		background: red;
+		float: left;
+		margin:10px; 
+
+	}
+	.div2{
+		height: 100px;
+		background: blue;
+		
+	}
+	.clearfloat:after{
+		display: block;
+		content: "";
+		clear: both;
+		visibility: hidden;
+		height: 0;
+	}
+	
+</style>
+</head>
+<body>
+<div class=" warper ">
+	<div class="clearfloat">
+		<div class="div1 ">hezi1</div>
+	</div>
+	
+	<div class="div2">hezi2hezi2hezi2hezi2hezi2</div>
+</div>
+
+
+</body>
+</html>

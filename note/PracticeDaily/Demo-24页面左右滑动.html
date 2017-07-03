@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			body{
+				width: 100%;
+				height: 100%;
+			}
+			ul{
+				width: 5000px;
+				height: 100%;
+			}
+			li{
+				display: block;
+				height: 800px;
+				width: 1000px;
+				text-align: center;
+				line-height:100% ;
+				float: left;
+				list-style: none;
+			}
+			
+			
+		</style>
+		<script>
+		window.onload = function(){
+			document.body.onmousewheel = function(event){
+				event = event || window.event;
+				
+				var direction = event.wheelDelta && (event.wheelDelta > 0? "mouseup":"mousedown");
+				
+				if(direction == "mouseup"){
+					document.body.scrollLeft+= 1000;
+				}else{
+					document.body.scrollLeft-= 1000;
+				}
+			}
+			
+		};
+	</script>
+	</head>
+	
+	<body>
+		<ul>
+			<li style="background: #0000FF;">10</li>
+			<li style="background: #008000;">20</li>
+			<li style="background: #009999;">30</li>
+			<li style="background: #00FF00;">40</li>
+			<li style="background: #286090;">50</li>
+		</ul>
+	</body>
+</html>
