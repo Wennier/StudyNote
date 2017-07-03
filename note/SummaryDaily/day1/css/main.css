@@ -1,0 +1,62 @@
+
+*{
+	margin:0;
+	padding: 0;
+}
+nav{
+	height: 50px;
+	background: #ccc;
+}
+nav ul{
+	list-style: none;
+	float: right;
+}
+nav ul li{
+	display: inline-block;
+	line-height: 50px;
+	margin-right: 20px;
+	
+}
+nav .logo{
+	float: left;
+	margin-left: 40px;
+	font-size: 20px;
+	letter-spacing: 2px;
+	
+}
+nav ul li a,nav .logo a{
+	display: inline-block;
+	line-height: 50px;
+	text-decoration: none;
+	height: inherit;
+	color: #fff;
+	font-family: "微软雅黑";
+	font-weight: 300;
+}
+
+
+#banner{
+	background: #777;
+	height: 700px;
+}
+#banner .inner{
+	width: 300px;
+	text-align: center;
+	margin: 0px auto;
+	position: relative;
+	top:260px;
+}
+#banner .inner .sub-heading{
+	line-height: 30px;
+	margin: 10px;
+}
+button{
+	border: none;
+	background: #333;
+	color: #eee;
+	padding: 14px 40px;
+}
+
+#banner .inner .more{
+	margin-top: 260px;
+}
