@@ -2,7 +2,43 @@
 *{
 	margin:0;
 	padding: 0;
+	font-family: "微软雅黑";
 }
+.hr{
+	width: 100%;
+	height: 2px;
+	margin:20px auto; 
+
+}
+.sub-heading{
+	font-size: 20px;
+	margin: 40px 0;
+	font-weight: bold;
+
+
+}
+.wrapper{
+	width: 1080px;
+	margin: 0 auto;
+}
+
+.clearboth:after{
+	content: "";
+	height: 0;
+	display: block;
+	clear: both;
+
+}
+p{
+	font-size: 18px;
+	letter-spacing: 1px;
+	
+}
+
+header{
+	background: rgba(0,0,0,0.8);
+}
+
 nav{
 	height: 50px;
 	background: #ccc;
@@ -36,8 +72,12 @@ nav ul li a,nav .logo a{
 
 
 #banner{
-	background: #777;
-	height: 700px;
+	
+	height: 1000px;
+	background: #777 url(../img/banner.jpg) no-repeat center;
+	background-size: cover;
+	background-attachment: fixed;
+	color: #fff;
 }
 #banner .inner{
 	width: 300px;
@@ -45,18 +85,184 @@ nav ul li a,nav .logo a{
 	margin: 0px auto;
 	position: relative;
 	top:260px;
+	
+
 }
+#banner .inner h1{
+	font-family: "微软雅黑";
+	font-weight: 700;
+	letter-spacing: 4px;
+	border-top: 2px solid #fff;
+	border-bottom: 2px solid #fff;
+	padding: 10px 0;
+}
+
+
+
+
 #banner .inner .sub-heading{
 	line-height: 30px;
-	margin: 10px;
+	margin: 30px;
 }
 button{
 	border: none;
-	background: #333;
-	color: #eee;
+	background: #A50A0A;
+	color: #fff;
 	padding: 14px 40px;
+	font-size: 16px;
+
 }
 
 #banner .inner .more{
-	margin-top: 260px;
+	margin-top: 300px;
+	color: #000;
 }
+#banner .inner .down{
+	color: #000;
+	font-size: 30px;
+	font-weight: bolder;
+}
+
+
+/*内容部分*/
+.green-section{
+	width: 100%;
+	background: rgba(47,223,179,0.8);
+	color: #fff;
+	text-align: center;
+	padding: 100px 0;
+}
+.green-section .wrapper{
+	width: 1080px;
+	margin: 0 auto;
+}
+.green-section .wrapper .hr{
+	width: 60%;
+	background:#fff;
+}
+.green-section .wrapper .icon-group .icon{
+	width: 80px;
+	height: 80px;
+	display: inline-block;
+	transform: rotate(45deg);
+	border: 1px solid #fff;
+	border-radius: 10px;
+	margin: 20px;
+	margin-top: 40px;
+}
+
+.gray-section{
+	background: #1A363B;
+	color: #fff;
+}
+.gray-section .article-pre{
+	/*font-size: 0;*/
+	
+}
+
+.gray-section .img-section{
+	width: 45%;
+}
+.gray-section .img-section img{
+	width: 100%;
+	float: left;
+}
+
+.gray-section .text-section{
+
+	width: 45%;
+	position: relative;
+	top: 70px;
+	left: 50px;
+	
+}
+.gray-section .text-section h2{
+	margin-bottom: 20px;
+	color: #fff;
+}
+.gray-section .text-section p{
+	font-size: 20px;
+	letter-spacing: 1px;
+
+}
+
+.article-pre > div{
+	float: left;
+}
+.article-pre:nth-child(odd){
+	background: rgba(255,255,255,.05);
+}
+.article-pre:after{
+	content: "";
+	height: 0;
+	display: block;
+	clear: both;
+
+}
+.gray-section .article-pre .right{
+	float: right;
+}
+
+.purple-section{
+	padding: 80px;
+	background: #66009E;
+	color: #fff;
+}
+.purple-section .heading-wrapper{
+	text-align: center;
+}
+.purple-section .hr{
+	width: 60%;
+	background: #A734E6;
+}
+.purple-section .card-group{
+	text-align: center;
+}
+.card{
+	float: left;
+	width: 50%;
+	min-height: 300px;
+	padding: 50px;
+	box-sizing: border-box;
+	
+}
+.card:first-child{
+	background:rgba(0,0,0,.04); 
+}
+.card:nth-child(2){
+	background:rgba(0,0,0,.08); 
+}
+.card:nth-child(3){
+	background:rgba(0,0,0,.12); 
+}
+.card:nth-child(4){
+	background:rgba(0,0,0,.16); 
+}
+.card:nth-child(5){
+	background:rgba(0,0,0,.20); 
+}
+.card:nth-child(6){
+	background:rgba(0,0,0,.24); 
+}
+
+footer{
+	width: 100%;
+	background: #333;
+	color: #fff;
+	min-height: 200px;
+	text-align: center;
+}
+ul.share-group{
+	display: block;
+	width: 1080px;
+	margin: 0 auto;
+	padding: 50px;
+}
+.share-group li{
+	display: inline-block;
+	padding: 10px;
+}
+.copy{
+	padding-bottom: 20px;
+}
+
