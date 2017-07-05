@@ -37,6 +37,10 @@ p{
 	letter-spacing: 3px;
 	
 }
+a{
+	color: #fff;
+	text-decoration: none;
+}
 
 header{
 	background: rgba(0,0,0,0.4);
@@ -56,18 +60,13 @@ nav ul{
 nav ul li{
 	display: inline-block;
 	line-height: 50px;
-	margin-right: 20px;
+	margin-right: 25px;
 	
 }
-nav ul li a{
+nav ul li a, .menu ul li{
 	font-size: 20px;
 	font-weight: 700;
 	letter-spacing: 2px;
-
-
-}
-
-nav ul li a{
 	display: inline-block;
 	line-height: 50px;
 	text-decoration: none;
@@ -75,7 +74,23 @@ nav ul li a{
 	color: #fff;
 	font-family: "微软雅黑";
 	font-weight: 300;
+
 }
+.menu{
+	width: 200px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: 60px 0;
+
+}
+.menu ul{
+	border-top: 2px solid #fff;
+}
+.
+
+
+
 
 
 #banner{
@@ -91,6 +106,7 @@ nav ul li a{
 	position: relative;
 	top:260px;
 	overflow: hidden;
+	padding-bottom: 400px;
 }
 #banner .inner h1{
 	font-family: "微软雅黑";
@@ -149,6 +165,7 @@ button{
 	color: #fff;
 	text-align: center;
 	padding: 100px 0;
+
 }
 .green-section .wrapper{
 	width: 1080px;
@@ -157,6 +174,7 @@ button{
 .green-section .wrapper .hr{
 	width: 60%;
 	background:#fff;
+	transition: width 2s;
 }
 .green-section .wrapper .icon-group .icon{
 	width: 80px;
