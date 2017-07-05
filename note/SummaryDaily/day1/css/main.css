@@ -29,29 +29,42 @@
 	clear: both;
 
 }
+h2{
+	letter-spacing: 3px;
+}
 p{
 	font-size: 18px;
-	letter-spacing: 1px;
+	letter-spacing: 3px;
 	
 }
 
 header{
-	background: rgba(0,0,0,0.8);
+	background: rgba(0,0,0,0.4);
 }
 
 nav{
 	height: 50px;
-	background: #ccc;
+	background: transparent;
+
 }
 nav ul{
 	list-style: none;
 	float: right;
+	position: fixed;
+	right: 20px;
 }
 nav ul li{
 	display: inline-block;
 	line-height: 50px;
 	margin-right: 20px;
 	
+}
+nav ul li a{
+	font-size: 20px;
+	font-weight: 700;
+	letter-spacing: 2px;
+
+
 }
 nav .logo{
 	float: left;
@@ -74,9 +87,7 @@ nav ul li a,nav .logo a{
 #banner{
 	
 	height: 1000px;
-	background: #777 url(../img/banner.jpg) no-repeat center;
-	background-size: cover;
-	background-attachment: fixed;
+	
 	color: #fff;
 }
 #banner .inner{
@@ -91,43 +102,43 @@ nav ul li a,nav .logo a{
 #banner .inner h1{
 	font-family: "微软雅黑";
 	font-weight: 700;
-	letter-spacing: 4px;
+	letter-spacing: 8px;
 	border-top: 2px solid #fff;
 	border-bottom: 2px solid #fff;
 	padding: 10px 0;
 }
 
+#banner .inner p{
+	
+	font-weight: normal;
 
+}
 
 
 #banner .inner .sub-heading{
 	line-height: 30px;
 	margin: 30px;
 }
+
+
 button{
 	border: none;
-	background: #A50A0A;
+	background: #FD93CD;
 	color: #fff;
 	padding: 14px 40px;
-	font-size: 16px;
-
+	font-size: 18px;
+	letter-spacing: 2px;
 }
 
-#banner .inner .more{
-	margin-top: 300px;
-	color: #000;
-}
 #banner .inner .down{
-	color: #000;
-	font-size: 30px;
-	font-weight: bolder;
+	margin-top: 350px;
 }
 
 
 /*内容部分*/
 .green-section{
 	width: 100%;
-	background: rgba(47,223,179,0.8);
+	background: rgba(47,223,179,0.9);
 	color: #fff;
 	text-align: center;
 	padding: 100px 0;
@@ -145,12 +156,19 @@ button{
 	height: 80px;
 	display: inline-block;
 	transform: rotate(45deg);
-	border: 1px solid #fff;
-	border-radius: 10px;
+	border: 2px solid #5FFFCE;
+	border-radius: 8px;
 	margin: 20px;
 	margin-top: 40px;
-}
 
+}
+.green-section .wrapper .icon-group .icon:hover{
+	border: 2px solid #fff;
+}
+.green-section .wrapper .icon-group .icon img{
+	margin-top: 16px;
+	transform:rotate(-45deg);
+}
 .gray-section{
 	background: #1A363B;
 	color: #fff;
@@ -266,3 +284,10 @@ ul.share-group{
 	padding-bottom: 20px;
 }
 
+
+.main-wrapper{
+	background: #444 url(../img/bg3.gif) no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center center;
+}
