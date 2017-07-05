@@ -4,7 +4,7 @@
 window.onload = function(){
 
 change_bg();
-
+head_animate();
 };
 
 function change_bg(){
@@ -18,4 +18,12 @@ function change_bg(){
 	main_bg.style.backgroundImage = "url(img/"+ arr_bg[num]+ ")";
 }
 
+function head_animate(){
+	var line_left = document.getElementsByClassName("left-line")[0];
+	var line_right = document.getElementsByClassName("right-line")[0];
+
+	line_left.style.left = 30 +"px";
+	line_right.style.right = 30 +"px";
+
+}
 

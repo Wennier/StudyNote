@@ -66,14 +66,8 @@ nav ul li a{
 
 
 }
-nav .logo{
-	float: left;
-	margin-left: 40px;
-	font-size: 20px;
-	letter-spacing: 2px;
-	
-}
-nav ul li a,nav .logo a{
+
+nav ul li a{
 	display: inline-block;
 	line-height: 50px;
 	text-decoration: none;
@@ -96,16 +90,29 @@ nav ul li a,nav .logo a{
 	margin: 0px auto;
 	position: relative;
 	top:260px;
-	
-
+	overflow: hidden;
 }
 #banner .inner h1{
 	font-family: "微软雅黑";
 	font-weight: 700;
 	letter-spacing: 8px;
-	border-top: 2px solid #fff;
-	border-bottom: 2px solid #fff;
 	padding: 10px 0;
+}
+#banner .inner .line{
+	width: 80%;
+	height: 2px;
+	background: #fff;
+	position: absolute;
+}
+#banner .inner .left-line{
+	top: 0;
+	left: -300px;
+	transition: left 2s;
+}
+#banner .inner .right-line{
+	
+	right: -300px;
+	transition: right 2s;
 }
 
 #banner .inner p{
