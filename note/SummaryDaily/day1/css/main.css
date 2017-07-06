@@ -41,28 +41,41 @@ a{
 	color: #fff;
 	text-decoration: none;
 }
+html{
+	width:100%;
+}
+body{
+	width: 100%;
+}
 
 header{
+	width: 100%;
 	background: rgba(0,0,0,0.4);
-}
+	}
 
 nav{
 	height: 50px;
 	background: transparent;
+	position: relative;
+
 
 }
-nav ul{
+nav .menu-show{
 	list-style: none;
 	float: right;
 	position: fixed;
 	right: 20px;
 }
-nav ul li{
+nav .menu-show li{
 	display: inline-block;
 	line-height: 50px;
 	margin-right: 25px;
 	
 }
+nav .menu-show li a{
+	transition: text-shadow 1s;
+}
+
 nav ul li a, .menu ul li{
 	font-size: 20px;
 	font-weight: 700;
@@ -76,28 +89,52 @@ nav ul li a, .menu ul li{
 	font-weight: 300;
 
 }
+.menu ul li a{
+	font-size: 16px;
+}
+
+.menu ul li a:hover{
+	font-size: 18px;
+	color: #ff6464;
+	font-weight: bold;
+}
+.menu-show:hover+div{
+	right: 0;
+}
+.menu-show:hover{
+	font-weight: bold;
+	text-shadow: 2px 0px 2px #ff7373;
+
+}
 .menu{
 	width: 200px;
-	position: absolute;
+	/*position: absolute;*/
 	top: 0;
-	right: 0;
+	right: -200px;
 	padding: 60px 0;
+	transition: right 1s;
+	position: fixed;
+}
+.menu:hover{
+	right: 0;
 
 }
 .menu ul{
 	border-top: 2px solid #fff;
+	border-bottom: 2px solid #fff;
+	padding: 20px 0;
 }
-.
 
 
 
 
 
 #banner{
-	
+
 	height: 1000px;
 	
 	color: #fff;
+	
 }
 #banner .inner{
 	width: 300px;
@@ -146,7 +183,7 @@ nav ul li a, .menu ul li{
 
 button{
 	border: none;
-	background: #FD93CD;
+	background: #ff8888;
 	color: #fff;
 	padding: 14px 40px;
 	font-size: 18px;
