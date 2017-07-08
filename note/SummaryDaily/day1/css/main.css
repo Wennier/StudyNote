@@ -196,7 +196,7 @@ button{
 
 
 /*内容部分*/
-.green-section{
+#green-section{
 	width: 100%;
 	background: rgba(78,234,162,0.9);
 	color: #fff;
@@ -204,19 +204,19 @@ button{
 	padding: 100px 0;
 
 }
-.green-section .wrapper{
+#green-section .wrapper{
 	width: 1080px;
 	margin: 0 auto;
 }
-.green-section .wrapper h2{
+#green-section .wrapper h2{
 	font-size: 30px;
 }
-.green-section .wrapper .hr{
+#green-section .wrapper .hr{
 	width: 60%;
 	background:#fff;
 	transition: width 2s;
 }
-.green-section .wrapper .icon-group .icon{
+#green-section .wrapper .icon-group .icon{
 	width: 80px;
 	height: 80px;
 	display: inline-block;
@@ -227,17 +227,17 @@ button{
 	margin-top: 40px;
 
 }
-.green-section .wrapper .icon-group .icon:hover{
+#green-section .wrapper .icon-group .icon:hover{
 	border: 2px solid #fff;
 }
-.green-section .wrapper .icon-group .icon img{
+#green-section .wrapper .icon-group .icon img{
 	margin-top: 16px;
 	transform:rotate(-45deg);
 }
 
 
 
-.gray-section .text-section p{
+#gray-section .text-section p{
 	font-size: 20px;
 	letter-spacing: 2px;
 	text-indent: 2em;
@@ -245,7 +245,7 @@ button{
 	font-family: "宋体";
 	font-weight: normal;
 }
-.gray-section .text-section span{
+#gray-section .text-section span{
 	display: inline-block;
 	width: 120px;
 	height: 40px;
@@ -256,28 +256,28 @@ button{
 	margin-top: 50px;
 	float: right;
 }
-.gray-section .text-section span a{
+#gray-section .text-section span a{
 	letter-spacing: 2px;
 	font-weight: bold;
 }
-.gray-section{
+#gray-section{
 	background: #1A363B;
 	color: #fff;
 }
-.gray-section .article-pre{
+#gray-section .article-pre{
 	/*font-size: 0;*/
 	
 }
 
-.gray-section .img-section{
+#gray-section .img-section{
 	width: 45%;
 }
-.gray-section .img-section img{
+#gray-section .img-section img{
 	width: 100%;
 	float: left;
 }
 
-.gray-section .text-section{
+#gray-section .text-section{
 
 	width: 45%;
 	position: relative;
@@ -285,7 +285,7 @@ button{
 	left: 50px;
 	
 }
-.gray-section .text-section h2{
+#gray-section .text-section h2{
 	margin-bottom: 30px;
 	color: #fff;
 }
@@ -304,19 +304,19 @@ button{
 	clear: both;
 
 }
-.gray-section .article-pre .right{
+#gray-section .article-pre .right{
 	float: right;
 }
 
-.purple-section{
+#purple-section{
 	padding: 80px;
 	background:#05c8c4;
 	color: #fff;
 }
-.purple-section .heading-wrapper{
+#purple-section .heading-wrapper{
 	text-align: center;
 }
-.purple-section .hr{
+#purple-section .hr{
 	width: 60%;
 	background: #00a6ab;
 }
