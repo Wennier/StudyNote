@@ -198,7 +198,7 @@ button{
 /*内容部分*/
 .green-section{
 	width: 100%;
-	background: rgba(47,223,179,0.9);
+	background: rgba(78,234,162,0.9);
 	color: #fff;
 	text-align: center;
 	padding: 100px 0;
@@ -207,6 +207,9 @@ button{
 .green-section .wrapper{
 	width: 1080px;
 	margin: 0 auto;
+}
+.green-section .wrapper h2{
+	font-size: 30px;
 }
 .green-section .wrapper .hr{
 	width: 60%;
@@ -230,6 +233,32 @@ button{
 .green-section .wrapper .icon-group .icon img{
 	margin-top: 16px;
 	transform:rotate(-45deg);
+}
+
+
+
+.gray-section .text-section p{
+	font-size: 20px;
+	letter-spacing: 2px;
+	text-indent: 2em;
+	line-height: 30px;
+	font-family: "宋体";
+	font-weight: normal;
+}
+.gray-section .text-section span{
+	display: inline-block;
+	width: 120px;
+	height: 40px;
+	border: 1px solid #558E98;
+	line-height: 40px;
+	text-align: center;
+	border-radius: 10px;
+	margin-top: 50px;
+	float: right;
+}
+.gray-section .text-section span a{
+	letter-spacing: 2px;
+	font-weight: bold;
 }
 .gray-section{
 	background: #1A363B;
@@ -257,14 +286,10 @@ button{
 	
 }
 .gray-section .text-section h2{
-	margin-bottom: 20px;
+	margin-bottom: 30px;
 	color: #fff;
 }
-.gray-section .text-section p{
-	font-size: 20px;
-	letter-spacing: 1px;
 
-}
 
 .article-pre > div{
 	float: left;
@@ -285,7 +310,7 @@ button{
 
 .purple-section{
 	padding: 80px;
-	background: #66009E;
+	background:#05c8c4;
 	color: #fff;
 }
 .purple-section .heading-wrapper{
@@ -293,10 +318,7 @@ button{
 }
 .purple-section .hr{
 	width: 60%;
-	background: #A734E6;
-}
-.purple-section .card-group{
-	text-align: center;
+	background: #00a6ab;
 }
 .card{
 	float: left;
