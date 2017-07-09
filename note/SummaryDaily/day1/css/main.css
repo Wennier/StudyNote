@@ -45,6 +45,7 @@ html{
 	width:100%;
 }
 body{
+	min-width: 1080px;
 	width: 100%;
 }
 
