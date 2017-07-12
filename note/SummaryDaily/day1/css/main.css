@@ -11,11 +11,11 @@
 
 }
 .sub-heading{
-	font-size: 18px;
-	margin: 40px 0;
-	font-weight: bold;
+	width: 52%;
+	font-size: 20px;
+	margin: 40px auto;
 	letter-spacing: 2px;
-
+	line-height: 30px;
 }
 .wrapper{
 	width: 1080px;
@@ -31,6 +31,7 @@
 }
 h2{
 	letter-spacing: 3px;
+	font-size: 30px;
 }
 p{
 	font-size: 18px;
@@ -56,7 +57,6 @@ header{
 
 nav{
 	height: 50px;
-	background: transparent;
 	position: relative;
 
 
@@ -210,7 +210,7 @@ button{
 	margin: 0 auto;
 }
 #green-section .wrapper h2{
-	font-size: 30px;
+	
 }
 #green-section .wrapper .hr{
 	width: 60%;
