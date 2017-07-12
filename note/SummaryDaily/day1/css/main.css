@@ -329,6 +329,17 @@ button{
 	box-sizing: border-box;
 	
 }
+.card h3{
+	font-size: 20px;
+	font-weight: normal;
+}
+.card p{
+	margin-top: 20px;
+	font-family: "宋体";
+	letter-spacing: 1px;
+	text-shadow: 2px 1px 1px #999;
+	line-height: 24px;
+}
 .card:first-child{
 	background:rgba(0,0,0,.04); 
 }
