@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/aboutMe.css">
+</head>
+<body>
+<div class="main-wrapper">
+<!--标题栏-->
+	<header>
+		<div class="mask"></div>
+		<div class="cover">
+			<div class="nav">
+				<h1>张小窝 · about me</h1>
+				<div class="btn"><a href="index.html">返回首页</a></div>
+			</div>
+		</div>
+	</header>
+
+	<div class="content">
+		<p>
+		<p>小时候，吃面是一件大事。</p></br></br>
+		<p>一家人约好今晚吃面。爷爷、奶奶早早的从地里收活回来，关上大门。那时候大伯还健在，打杂的事情总是他来做，生火、烧火就是奶奶的活儿了，爷爷则俨然一个大厨，切葱、剁蒜，分别在四个碗里放上猪油、酱油，盛入少许开水，动作十分娴熟，年幼的我端来一条小板凳，站在上面伸长了脖子目不转睛的望着锅里，生怕少给我放了点猪油似地。大家都分工明确，各尽其责。奶奶不时插上几句，唠叨着闲话家常，爷爷一边笑着回应一边很仔细的询问大家要吃多少，每每这时，我总要争一个大碗，要求多煮点，生怕不够，大家便又开始笑我人小眼睛大了。面条煮好了，一家人围坐于方桌，享受着今夜的美食，我美美的端着与自己年龄极不相衬的大碗，吃的津津有味，昏黄的灯光混合着腾腾升起的热气被阵阵欢笑声笼罩着。我定会将汤也喝个精光，满足的摸着撑到不行的肚子。这幅画面，就这样永远定格在了我幼小的记忆里。</p></br>
+		<p>后来有机会随父母迁到城里，早餐吃面成了一种习惯。早上睡眼惺忪的起床，母亲一边催促我洗脸，一边将煮好的面条端上桌。母亲是个注重生活品质的人，她喜欢将肥瘦兼半的肉混合着腌菜煎炒成臊子，面条里有了新鲜蔬菜，有时还放了个荷包蛋。可是不知道为什么，我总觉得没有爷爷煮的面条好吃。后来有机会随父母迁到城里，早餐吃面成了一种习惯。到城里，早餐吃面成了一种习惯。早上睡眼惺忪的起床，母亲一边催促我洗脸，一边将煮好的面条端上桌。母亲是个注重生活品质的人，她喜欢将肥瘦兼半的肉混合着腌菜煎炒成臊子，面条里有了新鲜蔬菜，有时还放了个荷包蛋。可是不知道为什么，我总觉得没有爷爷煮的面条好吃。</p></p>
+	</div>
+
+</div>
+
+</body>
+<script type="text/javascript" >
+	
+window.onload = function(){
+
+change_bg();
+
+};
+
+function change_bg(){
+
+	var main_bg = document.getElementsByClassName("main-wrapper")[0];
+
+	var arr_bg = new Array("bg1-aboutme.jpg","bg2-aboutme.jpg","bg3-aboutme.jpg","bg4-aboutme.jpg","bg5-aboutme.jpg");
+	var num = Math.floor(Math.random()*5);
+
+	var i=0;
+	var timer = null;
+	// var background = main_bg.style.backgroundImage;
+	main_bg.style.backgroundImage = "url(img/"+ arr_bg[num]+ ")";
+
+	// clearInterval(main_bg.timer);
+	main_bg.timer = setInterval(function(){
+
+		main_bg.style.backgroundImage = "url(img/"+ arr_bg[i%5]+ ")";
+		i++;
+		
+
+	},5000);
+	
+}
+
+
+
+</script>
+</html>
