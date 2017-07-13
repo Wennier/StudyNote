@@ -11,7 +11,6 @@
 
 }
 .sub-heading{
-	width: 52%;
 	font-size: 20px;
 	margin: 40px auto;
 	letter-spacing: 2px;
@@ -66,6 +65,7 @@ nav .menu-show{
 	float: right;
 	position: fixed;
 	right: 20px;
+	z-index: 20;
 }
 nav .menu-show li{
 	display: inline-block;
@@ -170,7 +170,7 @@ nav ul li a, .menu ul li{
 }
 
 #banner .inner p{
-	
+	width: 100%;
 	font-weight: normal;
 
 }
@@ -178,7 +178,7 @@ nav ul li a, .menu ul li{
 
 #banner .inner .sub-heading{
 	line-height: 30px;
-	margin: 30px;
+	/*margin: 30px;*/
 }
 
 
@@ -209,9 +209,7 @@ button{
 	width: 1080px;
 	margin: 0 auto;
 }
-#green-section .wrapper h2{
-	
-}
+
 #green-section .wrapper .hr{
 	width: 60%;
 	background:#fff;
@@ -289,6 +287,7 @@ button{
 #gray-section .text-section h2{
 	margin-bottom: 30px;
 	color: #fff;
+	font-size: 22px;
 }
 
 
@@ -316,6 +315,9 @@ button{
 }
 #purple-section .heading-wrapper{
 	text-align: center;
+}
+#purple-section .heading-wrapper .sub-heading{
+	width: 52%;
 }
 #purple-section .hr{
 	width: 60%;
