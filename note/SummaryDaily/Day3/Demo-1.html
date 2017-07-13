@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		header{
+			position: relative;
+			border: 1px solid green;
+			margin-bottom: 10px;
+		}
+		header .logo{
+			width: 50px;
+			height: 50px;
+			border: 1px solid red;
+			margin:10px;
+			float: left;
+		}
+		header .user_name{
+			width: 100px;
+			height: 20px;
+			position: absolute;
+			right: 10px;
+			bottom: 10px;
+			border: 1px solid black;
+			
+			text-align: right;
+		}
+		.clearboth:after{
+			display: block;
+			height: 0;
+			content: "";
+			clear: both;
+			visibility: hidden;
+
+		}
+		.content{
+			position: relative;
+		}
+		.content .content_left{
+			
+			height: 600px;
+			border: 1px solid blue;
+			margin-right: 220px;
+		}
+		.content .side_bar{
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 200px;
+			float: right;
+			border: 1px solid red;
+		}
+
+
+		footer{
+			width: 100%;
+			height: 50px;
+			border: 2px solid black;
+			margin: 10px 0;
+
+		}
+		.content1{
+			position: relative;
+		}
+		.content1 .content_right{
+			width: auto;
+			margin-left: 220px;
+			background: orange;
+			height: 800px;
+		}
+		.content1 .side_bar_left{
+			width: 200px;
+			height:600px;
+			float: left;
+			background: pink;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+	</style>
+</head>
+<body>
+
+<div class="wrapper">
+	<header class="clearboth">
+		<div class="logo">logo</div>
+		<div class="user_name">用户名</div>
+	</header>
+	<div class="content clearboth">
+		<div class="content_left">content_自适应宽度</div>
+		<div class="side_bar">aside-定宽200px</div>
+	</div>
+	<footer></footer>
+	<div class="content1 clearboth">
+		<div class="content_right">content_自适应宽度</div>
+		<div class="side_bar_left">aside-定宽200px</div>
+	</div>
+</div>
+
+</body>
+</html>
