@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+
+		*{
+			margin: 0;
+			padding:0; 
+		}
+		li{
+			list-style: none;
+		}
+		/*html{
+			width: 100%;
+			height: 100%;
+		}*/
+		body{
+			min-width:1140px;
+			height: 100%;
+		}
+
+		.clearfloat:after{
+			content: "";
+			height: 0;
+			font-size: 0;
+			clear: both;
+			visibility: hidden;
+			display: block;
+		}
+		#wrapper{
+			width: 600px;
+			height: 400px;
+			margin: 0px auto;
+			margin-top: 100px;
+			position: relative;
+			overflow: hidden;
+		}
+
+		#wrapper .img_group{
+			width: 4200px;
+			position: absolute;
+			left: -600px;
+			transition: left 1s;
+		}
+	    #wrapper .img_group img{
+			float: left;
+			width: 600px;
+		}
+
+		.dot{
+			position: absolute;
+			bottom: 20px;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+		.dot li{
+			width: 10px;
+			height: 10px;
+			background: #fff;
+			float: left;
+			margin-right: 10px;
+			border-radius: 50%;
+			cursor: pointer;
+		}
+		.dot .active{
+			background: orange;
+		}
+
+		
+		.arrow{
+			position: absolute;
+			top: 0;
+			width: 50px;
+			height: 400px;
+			background: rgba(0,0,0,0.4);
+			font-size: 50px;
+			font-weight: bolder;
+			line-height: 400px;
+			text-align: center;
+			color: #fff;
+			display: none;
+			transition: background 1s;
+
+		}
+		.pre{
+			left: 0;
+		}
+		.next{
+			right: 0;
+		}
+		#wrapper:hover .arrow{
+			display: block;
+		}
+		.arrow:hover{
+			background: rgba(0,0,0,0.7);
+		}
+
+
+	</style>
+
+	<script type="text/javascript">
+		window.onload = function(){
+
+			var wrap = document.getElementById("wrapper");
+			var img_group = wrap.getElementsByClassName("img_group")[0];
+
+			var prev = document.getElementsByClassName("pre")[0];
+			var next = document.getElementsByClassName("next")[0];
+
+			var dot = document.getElementsByClassName("dot")[0];
+			var dotaLi = dot.getElementsByTagName("li");
+
+			var num = 0;
+
+			init();
+
+
+
+			next.onclick = function(){
+				
+				if(num>=3){
+					num = 0;
+				}else{
+					num++;
+				}
+				showDot();
+				picChange(-600);
+				
+			}
+			prev.onclick = function(){
+
+				if( num <=0){
+
+					num = 3;
+				}else{
+					num--;
+				}
+				showDot();
+				picChange(600);
+			}
+
+
+			function init(){
+				for(var i = 0 ;i<dotaLi.length;i++){
+
+					dotaLi[i].index = i;
+
+					dotaLi[i].onclick = function(){
+						// var oldLi = dotaLi[num];
+						// oldLi.className = '';
+
+						// oldLi = this;
+						// this.className = 'active';
+
+						for(var i=0;i<dotaLi.length;i++){
+							if(dotaLi[i].className == 'active'){
+							dotaLi[i].className = "";
+							break;
+							}
+					
+						}
+						this.className = 'active';
+
+						img_group.style.left = ((this.index *(-600))-600) + 'px';
+						num = this.index;
+
+					}
+
+				}
+
+				
+			}
+
+			function showDot(){
+				
+
+				for(var i=0;i<dotaLi.length;i++){
+					if(dotaLi[i].className == 'active'){
+						dotaLi[i].className = "";
+						break;
+					}
+					
+				}
+
+				dotaLi[num].className = "active";
+
+			
+			}
+
+
+			function picChange(offset){
+
+				var currentLeft = parseInt(getComputedStyle(img_group).left);
+
+				var newLeft = currentLeft + offset;
+
+				img_group.style.left = newLeft +"px";
+
+
+				if(newLeft > -600){
+
+					img_group.style.left = -2400 +'px';
+
+				}
+				if(newLeft < -2400){
+
+					img_group.style.left = -600 + 'px';
+				}
+
+			}
+
+		};
+	</script>
+
+</head>
+
+<body>
+
+<div id="wrapper">
+	<div class="img_group">
+		<img src="img/bg5-aboutme.jpg">
+		<img src="img/bg1-aboutme.jpg">
+		<img src="img/bg3-aboutme.jpg">
+		<img src="img/bg4-aboutme.jpg">
+		<img src="img/bg5-aboutme.jpg">
+		<img src="img/bg1-aboutme.jpg">
+	</div>
+	<ul class="dot">
+		<li class="active"></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+	<div>
+		<div class="arrow pre"><</div>
+		<div class="arrow next">></div>
+	</div>
+</div>
+	
+</body>
+</html>

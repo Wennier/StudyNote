@@ -108,7 +108,9 @@
             aLi[i].index = i;
             aLi[i].innerHTML = i + 1;
             aLi[i].onclick = function(){
+                alert(i);
                 num = this.index;
+                alert(num);
                 fnTab();
                 //清空上个，当前添加
                 /*
