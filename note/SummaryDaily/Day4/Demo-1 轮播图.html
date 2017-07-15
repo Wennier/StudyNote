@@ -42,7 +42,7 @@
 			width: 4200px;
 			position: absolute;
 			left: -600px;
-			transition: left 1s;
+			transition: left 0.8s;
 		}
 	    #wrapper .img_group img{
 			float: left;
@@ -116,6 +116,31 @@
 
 			init();
 
+			var timer = null;
+
+			play();
+
+
+			//自动播放
+			function play(){
+				clearInterval(timer);
+				timer = setInterval(function(){
+					next.onclick();
+
+				},3000);
+				
+			}
+			function stop(){
+				clearInterval(timer);
+			}
+			
+			wrap.onmousemove = function(){
+				stop();
+			}
+			wrap.onmouseout = function(){
+				play();
+			}
+
 
 
 			next.onclick = function(){
@@ -153,25 +178,23 @@
 
 						// oldLi = this;
 						// this.className = 'active';
-
-						for(var i=0;i<dotaLi.length;i++){
-							if(dotaLi[i].className == 'active'){
-							dotaLi[i].className = "";
-							break;
-							}
-					
+						// 
+						// 用if语句来判断当再次点击已经显示的图片时，不会再执行相关语句，性能优化
+						
+						if(this.className == "active"){
+							return;
+						}else{
+							img_group.style.left = ((this.index *(-600))-600) + 'px';
+							num = this.index;
+							showDot();
 						}
-						this.className = 'active';
-
-						img_group.style.left = ((this.index *(-600))-600) + 'px';
-						num = this.index;
 
 					}
 
 				}
-
 				
 			}
+
 
 			function showDot(){
 				
@@ -185,7 +208,6 @@
 				}
 
 				dotaLi[num].className = "active";
-
 			
 			}
 
