@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>Wang 小窝吖</title>
 	<style type="text/css">
 
 		*{
@@ -142,7 +142,7 @@
 			}
 
 
-
+			//下一张
 			next.onclick = function(){
 				
 				if(num>=3){
@@ -154,6 +154,7 @@
 				picChange(-600);
 				
 			}
+			//上一张
 			prev.onclick = function(){
 
 				if( num <=0){
@@ -166,7 +167,7 @@
 				picChange(600);
 			}
 
-
+			//点击dot图片跟随相应变化
 			function init(){
 				for(var i = 0 ;i<dotaLi.length;i++){
 
