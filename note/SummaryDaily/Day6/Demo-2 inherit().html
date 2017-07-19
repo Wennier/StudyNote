@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8"/>
+	<title>Document</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		window.onload= function(){
+
+
+			function test(){
+				console.log(1);
+			}
+			// console.log(inherit(test));
+
+			var o = {x:"don't change this value"};
+
+			console.log(inherit(o).x);
+
+
+			function inherit(p){
+
+				if(p == null){ throw TypeError();}
+				if(Object.create){
+					return Object.create(p);
+				}
+
+				var type = typeof p;
+				if(type !== "object" && type !== "function"){ throw typeError();}
+				function f(){name:"viking"};
+				f.prototype = p;
+				return new f();
+
+			}
+
+
+		};
+	</script>
+	
+</body>
+</html>
