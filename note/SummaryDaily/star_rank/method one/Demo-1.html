@@ -24,7 +24,8 @@
 			width:30px;
 			height: 30px;
 			float: left;
-			background: transparent url(img/star.png) no-repeat 0 -30px;
+			background: transparent url(img/star.png) no-repeat;
+			background-position: 0 -30px;
 			margin-right: 10px;
 		}
 	</style>
@@ -46,7 +47,47 @@
 
 <script type="text/javascript" src="http://libs.baidu.com/jquery/1.11.3/jquery.min.js"></script>
 <script type="text/javascript">
+
+var num = 2,
+	$rank = $('#rank'),
+	$item = $rank.find('.rank-item');
+
+
+
+//点亮
+var lightOn = function(num){
+
+	$item.each(function(index){
+
+		if(index < num){
+			$(this).css('background-position','0 0px');
+		}else{
+			$(this).css('background-position','0 -30px');
+		}
+
+	})
+}
+
+//初始化
+
+lightOn(num);
+
+//事件绑定
+	$item.on('mouseover',function(){
+		lightOn($(this).index() + 1 );
+	}).on('click',function(){
+
+		num = $(this).index()+1;
+
+	});
+
+	$rank.on('mouseout',function(){
+		lightOn(num);
+	});
+
 	
+
+
 </script>
 	
 </body>
