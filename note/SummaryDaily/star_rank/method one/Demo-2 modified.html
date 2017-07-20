@@ -42,6 +42,13 @@
 		<li class="rank-item" title="好"></li>
 		<li class="rank-item" title="很好"></li>
 	</ul>
+	<ul id="rank2" class="rank">
+		<li class="rank-item" title="很不好"></li>
+		<li class="rank-item" title="不好"></li>
+		<li class="rank-item" title="一般"></li>
+		<li class="rank-item" title="好"></li>
+		<li class="rank-item" title="很好"></li>
+	</ul>
 
 </div>
 
@@ -54,6 +61,22 @@
 // 
 var rate = (function(){
 	
+
+
+	//点亮
+	var lightOn = function($item,num){
+
+		$item.each(function(index){
+
+			if(index < num){
+				$(this).css('background-position','0 0px');
+			}else{
+				$(this).css('background-position','0 -30px');
+			}
+
+		})
+	}
+
 	//3.复用
 	
 	var init = function(el, num){
@@ -62,51 +85,42 @@ var rate = (function(){
 			$item = $rank.find('.rank-item');
 
 			//初始化
+			//函数只需要声明一次，所以提到外边
+		lightOn($item,num);
 
-			lightOn(num);
+		//事件绑定    1.事件委托
+		$rank.on('mouseover','.rank-item',function(){
+			
+			lightOn($item,$(this).index() + 1 );
 
-			//点亮
-			var lightOn = function(num){
+		}).on('click','.rank-item',function(){
 
-				$item.each(function(index){
+			num = $(this).index()+1;
 
-					if(index < num){
-						$(this).css('background-position','0 0px');
-					}else{
-						$(this).css('background-position','0 -30px');
-					}
+		}).on('mouseout',function(){
+			lightOn($item,num);
+		});
 
-				})
-			}
-
-
-			//事件绑定    1.事件委托
-				$rank.on('mouseover','rank-item',function(){
-
-					lightOn($(this).index() + 1 );
-
-				}).on('click','rank-item',function(){
-
-					num = $(this).index()+1;
-
-				}).on('mouseout',function(){
-					lightOn(num);
-				});
-
-
-		return{
-			init:init;
+	};
+	// jQuery插件
+	$.fn.extend({
+		rate:function(num){
+			return this.each(function(){
+				init(this,num);
+			});
 		}
+	});	
 
-	}
 
-	
+	return{
+			init:init
+		}
 
 })();
 
 
 rate.init('#rank',2);
-
+$('#rank2').rate(4);
 	
 
 	
