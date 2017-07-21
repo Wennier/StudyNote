@@ -1,0 +1,17 @@
+*{margin: 0;padding: 0;}
+
+#wrapper{
+	position: relative;
+	height: 447px;
+	margin: 0 auto;
+	border-right: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	overflow: hidden;
+}
+
+#wrapper img{
+	position: absolute;
+	top: 0;
+	left: 0;
+	border-left: 1px solid #999;
+}
