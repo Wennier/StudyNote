@@ -34,27 +34,46 @@ window.onload = function(){
 
 	var translate = imgWidth - exposeWidth;
 
-	for(var i = 0; i <len ; i++){
+// 	for(var i = 0; i <len ; i++){
 
+// 		(function(i){
+
+// 			imgs[i].onmouseover = function(){
+
+// 				setImgsPos();//先将每个图片复位
+
+// 				for(var j = 0; j <len ; j++){
+
+// 					if(j <= this.index){
+// 						imgs[j].style.left = j * exposeWidth + 'px';
+// 					}else{
+// 						imgs[j].style.left = ( j-1) * exposeWidth + imgWidth + 'px';
+// 					}
+// 				}			
+// 		}
+
+
+// 	})(i);
+// }
+
+
+	
+	for(var i = 0;i<len; i++){
 		(function(i){
 
 			imgs[i].onmouseover = function(){
 
-				setImgsPos();//先将每个图片复位
 
-				for(var i = 0; i <len ; i++){
+				setImgsPos();
+				for(var j =1;j<=i;j++){
+					imgs[j].style.left = parseInt(imgs[j].offsetLeft) - translate +'px';
+				}
+			}
 
-					if(i <= this.index){
-						imgs[i].style.left = i * exposeWidth + 'px';
-					}else{
-						imgs[i].style.left = (i-1) * exposeWidth + imgWidth + 'px';
-					}
-				}			
-		}
+			
 
-
-	})(i);
-}
+		})(i);
+	}
 
 	
 
