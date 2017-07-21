@@ -63,7 +63,7 @@ window.onload = function(){
 
 			imgs[i].onmouseover = function(){
 
-
+				//先复位
 				setImgsPos();
 				for(var j =1;j<=i;j++){
 					imgs[j].style.left = parseInt(imgs[j].offsetLeft) - translate +'px';
