@@ -57,24 +57,33 @@ header{
 nav{
 	height: 50px;
 	position: relative;
+	z-index: 2;
 
-
+}
+nav .header-background{
+	width: 100%;
+	height: 50px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,0.7);
+	display: none;
 }
 nav .menu-show{
 	list-style: none;
-	float: right;
 	position: fixed;
-	right: 20px;
-	z-index: 20;
+	z-index: 20; 
+	right: 0;
 }
 nav .menu-show li{
+	float: right;
 	display: inline-block;
 	line-height: 50px;
-	margin-right: 25px;
+	margin-right: 45px;
 	
 }
 nav .menu-show li a{
-	transition: text-shadow 1s;
+	transition: text-shadow 0.5s;
 }
 
 nav ul li a, .menu ul li{
@@ -92,6 +101,7 @@ nav ul li a, .menu ul li{
 }
 .menu ul li a{
 	font-size: 16px;
+
 }
 
 .menu ul li a:hover{
@@ -99,7 +109,7 @@ nav ul li a, .menu ul li{
 	color: #ff6464;
 	font-weight: bold;
 }
-.menu-show:hover+div{
+.menu-show:hover + div{
 	right: 0;
 }
 .menu-show:hover{
@@ -111,11 +121,11 @@ nav ul li a, .menu ul li{
 	width: 200px;
 	/*position: absolute;*/
 	top: 0;
-	right: -200px;
-	padding: 60px 0;
-	transition: right 1s;
+	right: -220px;
+	padding: 50px 0px 40px 20px;
+	transition: right 0.8s;
 	position: fixed;
-	background: rgba(0,0,0,0.5);
+	background: rgba(0,0,0,0.7);
 }
 .menu:hover{
 	right: 0;
@@ -309,6 +319,9 @@ button{
 	float: right;
 }
 
+
+
+
 #purple-section{
 	padding: 80px;
 	background:#05c8c4;
@@ -324,7 +337,79 @@ button{
 	width: 60%;
 	background: #00a6ab;
 }
-.card{
+.wrapper{
+	border: 1px solid red;
+	overflow: hidden;
+}
+.gossip-area{
+	width: 100%;
+	margin: 0px 50px;
+
+}
+/*.gossip-area div{
+	float: left;
+	font-size: 20px;
+	font-weight: 300;
+	letter-spacing: 2px;
+}*/
+.gossip-area .send{
+	float: right;
+	margin-right: 100px;
+	cursor: pointer;
+
+}
+.gossip-area .gossip-text{
+	width: 85%;
+	height: 100px;
+	border: none;
+	border-radius: 10px;
+	outline: none;
+	clear: both;
+	padding: 20px 30px;
+	resize: none;
+	text-align: left;
+	margin-top: 20px;
+
+}
+
+.gossip-area .line{
+	width: 90%;
+	height: 4px;
+	background: #00a6ab;
+	margin: 20px 0px;
+}
+.gossip-area .gossip-list ul{
+	width: 90%;
+	height: 80px;
+	background: rgba(0,0,0,0.05);
+	list-style: none;
+}
+.gossip-area .gossip-list ul li{
+	padding: 10px 15px;
+}
+.gossip-area .gossip-list ul img{
+	float: left;
+	margin-right: 15px;
+}
+.gossip-area .gossip-list ul li .data{
+	line-height: 26px;
+
+}
+.gossip-area .gossip-list ul li .text{
+	margin-top: 10px;
+	clear: both;
+	font-family: "宋体";
+	letter-spacing: 1px;
+	text-shadow: 2px 1px 1px #999;
+}
+
+
+/*::-webkit-input-placeholder{
+	color: #ccc;
+};
+*/
+
+/*.card{
 	float: left;
 	width: 50%;
 	min-height: 300px;
@@ -360,7 +445,7 @@ button{
 }
 .card:nth-child(6){
 	background:rgba(0,0,0,.24); 
-}
+}*/
 
 footer{
 	width: 100%;

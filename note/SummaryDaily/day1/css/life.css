@@ -23,7 +23,7 @@ a{
 	background-size: cover;
 	background-position: center center;
 	position: relative;
-	border: 1px solid red;
+	overflow: hidden;
 }
 .mask{
 
