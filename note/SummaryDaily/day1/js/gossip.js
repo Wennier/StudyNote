@@ -18,7 +18,7 @@
 		text.value = "想说点什么呢？（记得点击右上角的小飞机噢~）";;
 
 	}
-	
+
 	text.onblur = textTip();
 
 	text.onfocus = function(){
@@ -29,11 +29,13 @@
 	send.onclick = function(){
 		getText = text.value;
 		data = getData();
+		
 		var insertNode = document.createElement('li');
 		var nodeContext = "<img src='img/dataicon.png'><div class='data'>"+ data +"</div><div class='text'>"+ getText +"</div>";
 		
 		insertNode.innerHTML = nodeContext;
-		// changeBg();
+		insertNode.style.background = "rgba(0,0,0,0.05)";
+
 	 	list.insertBefore(insertNode,list.children[0]);
 
 	}

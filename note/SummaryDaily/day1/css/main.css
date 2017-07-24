@@ -379,8 +379,7 @@ button{
 }
 .gossip-area .gossip-list ul{
 	width: 90%;
-	height: 80px;
-	background: rgba(0,0,0,0.05);
+	background: rgba(0,0,0,0.03);
 	list-style: none;
 }
 .gossip-area .gossip-list ul li{

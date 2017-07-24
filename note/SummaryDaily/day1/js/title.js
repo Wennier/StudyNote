@@ -7,7 +7,3 @@
 
 	var bodyTop = document.body.scollTop;
 
-
-	 // if(bodyTop ){
-
-	 // }
