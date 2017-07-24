@@ -1,7 +1,6 @@
 
 
 
-window.onload = function(){
 
 	// var header-bg = document.getElementsByClassName("header-background");
 
@@ -14,6 +13,3 @@ window.onload = function(){
 	// if(document.body.scollTop){
 
 	// }
-
-
-};

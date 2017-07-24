@@ -1,6 +1,6 @@
 
 
-window.onload = function(){
+
 
 	var box = document.getElementsByClassName('gossip-list')[0];
 
@@ -8,28 +8,40 @@ window.onload = function(){
 	var send = document.getElementsByClassName('send')[0];
 
 	var list = document.getElementsByClassName('gossip-list-ul')[0]; 
-
-	// var listData = list.getElementsByClassName('data');
-	// var listText = list.getElementsByClassName('text');
+ 
+	var data=null,
+		getText = null;
 
 	
 
 	send.onclick = function(){
-		var liCopy = list.cloneNode(true);
-		var listData = liCopy.getElementsByClassName('data');
-		var listText = liCopy.getElementsByClassName('text');
-
-		listText.innerHTML = "hello"; 
-		alert(text.innerHTML);
+		getText = text.value;
+		data = getData();
+		var insertNode = document.createElement('li');
+		var nodeContext = "<img src='img/dataicon.png'><div class='data'>"+ data +"</div><div class='text'>"+ getText +"</div>";
 		
-		box.insertBefore(liCopy,box.children[0]);
-
+		insertNode.innerHTML = nodeContext;
+		// changeBg();
+	 	list.insertBefore(insertNode,list.children[0]);
 
 	}
 
 	function getData(){
 
+		var myTime = new Date();
+		var iYear = myTime.getFullYear();
+		var iMonth = myTime.getMonth()+1;
+		var iDate = myTime.getDate();
+
+		return iYear+'-'+iMonth+'-'+iDate;
+
 	}
 
+	// function changeBg(){
 
-}
+	// 	for(var i = 0.03 ;i < 100 ; i++){
+	// 		list.style.backgroundColor = "rgba(0,0,0,"+ i +")";
+	// 		i += 0.02;
+	// 	}
+	// }
+ 

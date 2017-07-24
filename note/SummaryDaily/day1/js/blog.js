@@ -1,11 +1,9 @@
 
 
 
-window.onload = function(){
-
 change_bg();
 head_animate();
-};
+
 
 function change_bg(){
 
@@ -25,7 +23,5 @@ function head_animate(){
 
 	line_left.style.left = 30 +"px";
 	line_right.style.right = 30 +"px";
-
-
 }
 
