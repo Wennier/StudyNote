@@ -2,14 +2,12 @@
 
 
 
-	// var header-bg = document.getElementsByClassName("header-background");
+	var headeBg = document.getElementsByClassName("header-background");
 
 
 	var bodyTop = document.body.scollTop;
 
-	
 
-	// alert(bodyTop);
-	// if(document.body.scollTop){
+	 // if(bodyTop ){
 
-	// }
+	 // }

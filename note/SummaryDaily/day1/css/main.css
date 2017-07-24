@@ -385,6 +385,7 @@ button{
 }
 .gossip-area .gossip-list ul li{
 	padding: 10px 15px;
+	margin: 10px 0;
 }
 .gossip-area .gossip-list ul img{
 	float: left;

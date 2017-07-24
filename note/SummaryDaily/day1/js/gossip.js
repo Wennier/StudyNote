@@ -14,6 +14,18 @@
 
 	
 
+	function textTip(){
+		text.value = "想说点什么呢？（记得点击右上角的小飞机噢~）";;
+
+	}
+	
+	text.onblur = textTip();
+
+	text.onfocus = function(){
+		text.value = "";
+	}
+
+
 	send.onclick = function(){
 		getText = text.value;
 		data = getData();
@@ -37,11 +49,6 @@
 
 	}
 
-	// function changeBg(){
+	
 
-	// 	for(var i = 0.03 ;i < 100 ; i++){
-	// 		list.style.backgroundColor = "rgba(0,0,0,"+ i +")";
-	// 		i += 0.02;
-	// 	}
-	// }
  
