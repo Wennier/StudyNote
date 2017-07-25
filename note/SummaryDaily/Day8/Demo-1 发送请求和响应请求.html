@@ -30,5 +30,34 @@
 	<input type="button" id="save" name="" value="保存">
 	<p id="createResult"></p>
 	
+
+	<script type="text/javascript">
+
+	var search = document.getElementById('search'),
+		keywords = document.getElementById('keywords');
+
+
+	search.onclick = function(){
+
+		var request = new XMLHttpRequest();
+		request.open("GET","service.php?number=" + keywords.value);
+		request.send(); 
+
+		request.onreadystatechange = function(){
+
+			if(request.readystate === 4 && request.status === 200){
+
+				document.getElementById('searchResult').innerHTML = request.responseText; 
+
+			}else{
+				alert("发生错误"+request.status);
+			}
+		}
+
+	}
+		
+
+	</script>
+	}
 </body>
 </html>
