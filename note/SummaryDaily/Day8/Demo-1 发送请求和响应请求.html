@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8"/>
+	<title>Document</title>
+	<style type="text/css">
+		body,label,input,select{font-size: 26px;line-height: 1.8};
+	</style>
+</head>
+<body>
+
+	<h1>员工查询</h1>
+	<label>请输入员工编号：</label>
+	<input type="text" id="keywords" name="">
+	<input type="button" id="search" name="" value="查询">
+	<p id="searchResult"></p>
+
+	<h1>员工新建</h1>
+	<label>请输入员工姓名：</label>
+	<input type="text" id="staffName" name=""><br>
+	<label>请输入员工编号：</label>
+	<input type="text" id="staffNumber" name=""><br>
+	<label>请输入员工性别：</label>
+	<select id="staffSex">
+		<option>男</option>
+		<option>女</option>
+	</select><br>
+	<label>请输入员工职位：</label>
+	<input type="text" id="staffJob" name=""><br>
+	<input type="button" id="save" name="" value="保存">
+	<p id="createResult"></p>
+	
+</body>
+</html>

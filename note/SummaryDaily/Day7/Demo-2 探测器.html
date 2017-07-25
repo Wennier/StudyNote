@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8"/>
+	<title>Document</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		
+	!function(){
+		function DetectorBase(configs){
+			if(!this instanceof DetectorBase){
+
+				throw new Error('Do not invoke without new');
+			}
+
+			this.configs = configs;
+			this.analyze();
+
+		}
+
+		DetectorBase.prototype.detect = function(){
+			throw new Error('Not implemented');
+		};
+
+		DetectorBase.prototype.analyze = function(){
+			console.log('analyzing');
+			this.data = "####data####";
+		};
+
+
+	}
+
+	
+
+
+	</script>
+	
+</body>
+</html>
