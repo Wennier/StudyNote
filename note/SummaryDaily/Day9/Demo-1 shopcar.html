@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8"/>
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+
+	<table id="cartable">
+		
+		<thead>
+			<tr>
+				<th><label><input class="check-all check" type="checkbox" name="">&nbsp;全选</label></th>
+				<th>商品</th>
+				<th>单价</th>
+				<th>数量</th>
+				<th>小计</th>
+				<th>操作</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td class="checkbox"><label><input class="check-one check" type="checkbox" name=""></label></td>
+				<td class="goods"><img src="img/teemo1.jpg"><span>Casio/卡西欧 EX-TR350</span></td>
+				<td class="price">510</td>
+				<td class="count">
+					<span class="reduce"></span>
+					<input class="count-input" type="text" name="" value="1">
+					<span class="add">+</span>
+				</td>
+				<td class="subtotal">510</td>
+				<td class="operation"><span class="delete">删除</span></td>
+			</tr>
+			<tr>
+				<td class="checkbox"><label><input class="check-one check" type="checkbox" name=""></label></td>
+				<td class="goods"><img src="img/teemo2.jpg"><span>Casio/卡西欧 Teemo2</span></td>
+				<td class="price">410</td>
+				<td class="count">
+					<span class="reduce"></span>
+					<input class="count-input" type="text" name="" value="1">
+					<span class="add">+</span>
+				</td>
+				<td class="subtotal">410</td>
+				<td class="operation"><span class="delete">删除</span></td>
+			</tr>
+			<tr>
+				<td class="checkbox"><label><input class="check-one check" type="checkbox" name=""></label></td>
+				<td class="goods"><img src="img/teemo3.jpg"><span>Casio/卡西欧 EX-TR350</span></td>
+				<td class="price">310</td>
+				<td class="count">
+					<span class="reduce"></span>
+					<input class="count-input" type="text" name="" value="1">
+					<span class="add">+</span>
+				</td>
+				<td class="subtotal">310</td>
+				<td class="operation"><span class="delete">删除</span></td>
+			</tr>
+			<tr>
+				<td class="checkbox"><label><input class="check-one check" type="checkbox" name=""></label></td>
+				<td class="goods"><img src="img/teemo4.jpg"><span>Casio/卡西欧 EX-TR350</span></td>
+				<td class="price">110</td>
+				<td class="count">
+					<span class="reduce"></span>
+					<input class="count-input" type="text" name="" value="1">
+					<span class="add">+</span>
+				</td>
+				<td class="subtotal">110</td>
+				<td class="operation"><span class="delete">删除</span></td>
+			</tr>
+
+		</tbody>
+
+	</table>
+	<div class="foot" id="foot">
+		<label class="fl select-all"><input type="checkbox" name="" class="check-all check">&nbsp;全选</label>
+		<a href="javascript:;" class="fl delete" id="deleteAll">删除</a>
+		<div class="fr closing">结算</div>
+		<div class="fr total">合计：￥<span id="priceTotal">0.00</span></div>
+		<div class="fr select" id="selected">已选商品
+			
+			<span id="selectedTotal">0</span>件
+			<span class="arrow up">👆</span>
+			<span class="arrow down">👇</span>
+
+		</div>
+		<div class="selected-view">
+			
+		</div>
+
+	</div>
+	
+</body>
+</html>

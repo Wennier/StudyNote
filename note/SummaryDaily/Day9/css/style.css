@@ -1,0 +1,30 @@
+
+
+*{margin: 0;padding: 0;}
+table{width:860px;border-collapse:collapse;margin:0px auto;border-top: 4px solid lightblue;}
+th{padding: 10px 5px;}
+tr{border-bottom: 1px solid #ccc;}
+td{padding: 0px 30px;text-align: left;}
+thead tr{background: #5FCCD4;}
+tbody tr{background: #B9EFF3;}
+img{display: inline-block;width: 100px;margin: 10px 10px;}
+.count-input{width:40px;height: 18px;float: left;text-align: center;}
+.goods span{float:right;margin-top: 60px;}
+.subtotal{color: red;font-weight: bold;}
+.count span{float:left;display:inline-block;  width: 15px;height: 22px;text-align: center;
+line-height: 22px;background: #ccc;cursor: pointer;}
+.count span:hover{font-weight: bold;}
+.delete{cursor: pointer;}
+.delete:hover{color:blue;}
+
+.foot{width:860px;line-height: 50px;margin:0 auto;background: #D7D7D7;margin-bottom: 100px;margin-top: 10px;border: 1px solid #ccc;}
+.foot label{margin-left: 10px;}
+.fr{display: inline-block;float: right;}
+.closing{width: 100px;text-align: center;font-weight: bold;font-size: 18px;letter-spacing: 5px;background: #EAEAEA;border-left: 1px solid #333;cursor: pointer;}
+#deleteAll{text-decoration: none;margin-left: 50px; font-weight: bold;color: #000;}
+.foot span{color:red;font-weight: bold;margin: 0 5px;}
+.select{margin-right: 30px;position:relative;}
+.arrow{position: absolute;right: -25px;top: 0;margin-left: 10px;}
+.total{margin-right: 20px;}
+.up{display: block; cursor: pointer;}
+.down{display: none;cursor: pointer;}
