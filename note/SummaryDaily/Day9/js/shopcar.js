@@ -49,9 +49,37 @@ window.onload = function(){
 				}
 			}
 
-
+			setSelectAll();
 			getTotal();
+			
+		}
 
+		
+
+
+	}
+
+
+
+	// m+=1;
+	// 
+	// 当单个物品全被选择则时，全选按钮为true
+	function setSelectAll(){
+
+		for(var m = 1,len = checkInputs.length;m<len-1;m++){
+			if(checkInputs[m].checked){
+				if(m == len-2){
+					for(var k = 0,len = checkAllInputs.length; k <len ; k++){
+						checkAllInputs[k].checked = true;
+					}
+				}
+				continue;
+
+			}else{
+
+				break;				
+			}
+			
 		}
 	}
 
