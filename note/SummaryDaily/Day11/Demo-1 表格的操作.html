@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8"/>
+	<title>Document</title>
+
+
+	<style type="text/css">
+		#tab{
+			width: 500px;
+			border: 1px solid black;
+			border-collapse: collapse;
+		}
+		table, td, th{border: 1px solid black;}
+	</style>
+	<script type="text/javascript">
+		window.onload = function(){
+
+			var data = [
+
+				{id:1,name:"leo",sex:"男"},
+				{id:2,name:"viking",sex:"男"},
+				{id:3,name:"wennier",sex:"女"},
+				{id:4,name:"lili",sex:"女"},
+			];
+
+			var oTab = document.getElementById('tab');
+			var oTbody = oTab.tBodies[0];
+
+			for(var i = 0,len = data.length;i < len;i++){
+
+				var oTr = document.createElement('tr');
+
+				if(i%2){
+					oTr.style.background = "#ccc";
+				}else{
+					oTr.style.background = "#fff";
+				}
+
+				var oTd = document.createElement('td');
+				oTd.innerHTML = data[i].id;
+				oTr.appendChild(oTd);
+
+				var oTd = document.createElement('td');
+				oTd.innerHTML = data[i].name;
+				oTr.appendChild(oTd);
+
+				var oTd = document.createElement('td');
+				oTd.innerHTML = data[i].sex;
+				oTr.appendChild(oTd);
+
+				var oTd = document.createElement('td');
+				
+				var oA = document.createElement('a');
+				oA.innerHTML = "删除";
+				oA.href = "javascript:;";
+				oA.onclick = function(){
+					oTbody.removeChild(this.parentNode.parentNode);
+
+					for(var i =0;i<oTbody.rows.length;i++){
+						if(i%2){
+							oTbody.rows[i].style.background = "#ccc";
+						}else{
+							oTbody.rows[i].style.background = "#fff";
+						}
+					}
+				}
+
+				oTd.appendChild(oA);
+				oTr.appendChild(oTd);
+
+				
+
+
+
+
+
+
+
+				oTbody.appendChild(oTr);
+
+			}
+		}
+	</script>
+</head>
+<body>
+
+	<table id="tab">
+		<thead>
+			<tr>
+				<th>id</th>
+				<th>name</th>
+				<th>sex</th>
+				<th>operate</th>
+			</tr>
+		</thead>
+		<tbody>
+			
+		</tbody>
+	</table>
+	
+</body>
+</html>
